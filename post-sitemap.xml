@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://asterisks.netlify.com</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/wp-md-syntax-escape/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/win-conemu/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/31/webpack-load-css-less/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/04/unity-input-getkeydown-fixedupdate/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/07/unity-loadsceneasync/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/04/unity-new-gameobject/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/04/unity-multi-scene-editing/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/19/unity-parse-yaml/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/unity2d-ray-get-gameobject/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/04/unity-read-textfile-in-resouces/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/15/unity-recttransform/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/02/unity2d-sprite/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/unity2d-sprite-filter/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/22/unity-read-2darray-json/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/05/01/vim-in-windows/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/30/vscode-ts-find-usages/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/03/24/vscode-change-lang/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2020/03/14/vue-animate-component/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/15/wants-in-steam-winter-sale-2017/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/01/04/spacechem-sync-3/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/start-blog/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/23/ts-es6-module-export-var/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/30/ts-override-methods/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/02/ts-types/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/04/ts-void-type/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2014/12/16/ufo-escape/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/25/ts-ide-netbeans/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/31/unity-change-field/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/03/29/tumblr-interesting-posts/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/09/30/twitter-frozen/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2015/02/16/typing-cycle/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/04/unity-couldnt-transform-translate/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/11/unity-exists-scene/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/07/unity-cs-6/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/14/plink-vagrant/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/03/17/orb-roll-with-time/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/04/18/problem-drawing-canvas/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/06/02/problems-in-windows-10/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/07/pz-linkcard/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/11/rapid-environment-editor/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/14/report-i-bought-my-pc/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/10/returned-windows-8-1/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/08/15/serialport-without-vs/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/03/25/rxjs-async-load-image/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/03/06/slow-cities-skylines/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/06/shortcuts-vscode/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/31/spacechem-cleared-end-of-the-line/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/31/spacechem-sync-2/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/31/spacechem-sync-1/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/31/spacechem-points/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/23/intel-hd-graphics-display/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/04/24/js-is-str-color/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/js-movejs/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/03/01/importance-of-encryption/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/04/01/js-void/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/07/14/line-teacher-bot/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/12/24/made-sno-error/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/04/05/js-regexp-match/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/05/01/make-gvim-cool/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/misaki-font/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/03/11/linewidth-points/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/27/netbeans-fontconfig-properties/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/01/03/moved-blog/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/16/ontriggerenter-scenemanager-unload/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2019/04/01/nuxt-v2-speed-up/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2014/01/22/ms-first-visit/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/05/18/escape-sequence-replace/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/07/03/errored-in-ace/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/13/flu-2017/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/08/08/fixed-my-note-pc/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/30/game-points/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/06/03/galois-gen/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/08/23/for-programming-beginner/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/16/git-private-bitbucket/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/07/gulp-args-task/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/gulp-tsify-watchify/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/12/23/halstar/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/04/12/how-to-clear-canvas-circle-or-rect/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/02/hueman-theme-date-change/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/02/07/hexo-search-result/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/24/how-to-develop-vscode-extensions/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/17/how-to-install-hub-for-windows/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/13/2017-god-songs/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/12/26/bought-besiege/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/18/azure-json-woff-from-github/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/12/28/bought-geometry-dash/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/02/06/bought-cities-skylines/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/01/04/automatically-deploy-wercker/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/01/c-sharp-async-ui/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/12/05/copied-chrono-trigger/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/30/bought-oxygen-not-included/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2019/05/01/campbell/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/11/docker-centos-git/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/01/13/docker-commit-publish/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2018/11/09/codenvy-vue-starter/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/03/24/electron-vue-electron-connect/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2016/12/04/emscripten-cpp-js-fn/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/2017/12/16/dont-use-mouse-in-vscode/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

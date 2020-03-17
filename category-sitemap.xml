@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://asterisks.netlify.com</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Blog-Management/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Collections/%E6%97%A5%E8%A8%98/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Web-Programming/Collections/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Web-Programming/Collections/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/git/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/git/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Game/%E6%97%A5%E8%A8%98/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Bash/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Unity/Game/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Bash/git/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Unity/Game/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Unity/Game/Programming/Made-by-me/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/MIDI/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/MIDI/Made-by-me/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/diary/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Virtual-Environment/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Made-by-me/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/SERIES/Spacechem-Tips/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/SERIES/Spacechem-Tips/Game/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Uncategorized/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Game/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Game/Collections/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Unity/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/SERIES/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Windows/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Unity/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/SERIES/Unity/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Unity/Made-by-me/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/SERIES/Unity/Unity-Tips/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/SERIES/Unity/Unity-Tips/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Web-Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Collections/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Web-Programming/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/categories/Collections/Programming/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

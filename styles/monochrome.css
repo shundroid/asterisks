@@ -1,0 +1,7 @@
+@media mq-normal {
+  body.monochrome .main-container .article,
+  body.monochrome .main-container .sidebar img {
+    transition-duration: 0.4s;
+    transition-property: filter, -webkit-filter, -moz-filter, -ms-filter, -o-filter;
+  }
+}

@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/music/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/azure/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/iis/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/mime/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/wercker/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/ci/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/async/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/domino/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/docker/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/virtualbox/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/vue/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/codenvy/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/electron/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/emscripten/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/gist/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/vim/</loc>
+        <lastmod>2020-03-17T02:25:18.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/youtube/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/besiege/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/git/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/github/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/vscode-ext/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/ruby/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/terminal/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/ace/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/node/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/npm/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/diary/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/niconico/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/bitbucket/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/gulp/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/halstar/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/hueman/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/php/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/cygwin/</loc>
+        <lastmod>2020-03-17T02:25:18.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/hexo/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/midi/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/bower/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/js/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/movejs/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/mozilla/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/privacy/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/web/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/%E3%81%9D%E3%81%86%E3%81%84%E3%81%88%E3%81%B0/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/javascript-nodejs-line/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/sekaowa/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/font/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/math/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/matter-js/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/jdk/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/from-codeiq/</loc>
+        <lastmod>2020-03-17T02:25:18.652Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/gpu/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/windows10/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/cities-sky-lines/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/nodejs/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/browserify/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/canvas/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/wordpress/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/putty/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/vagrant/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/sphero/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/microsoft/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/python/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/visualstudio/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/rx-js/</loc>
+        <lastmod>2020-03-17T02:25:18.653Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/game/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/netbeans/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/spacechem/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/es6/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/reflection/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/tumblr/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/cs6/</loc>
+        <lastmod>2020-03-17T02:25:18.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/poly-bridge/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/steam/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/oxygen-not-included/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/vscode/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/typescript/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/unity/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/unity2d/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/csharp/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/json/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/yaml/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/raycast/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/ugui/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/sprite/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/dll/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/litjson/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/regedit/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/hacknet/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/opus-magnum/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/shenzhen-io/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/tis-100/</loc>
+        <lastmod>2020-03-17T02:25:18.655Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/javascript/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/webpack/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/html/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/windows/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/css/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/highlight/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/markdown/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/cmd/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/conemu/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://asterisks.netlify.com/tags/less/</loc>
+        <lastmod>2020-03-17T02:25:18.656Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

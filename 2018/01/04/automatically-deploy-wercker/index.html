@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+  <title>Wercker を使って Hexo の deploy を自動化する - asterisks</title>
+
+
+<meta name="description" content="こんにちは。shundroid です。 Hexo にブログを移行しましたが、一回一回記事を上げるごとに、git commit して hexo deploy するのはめんどくさいですよね。 そこで、今回は wercker を使って git commit されると自動でデプロイしてくれるようにします。 目指す運営形態 上のような形を目指し、今回 Wercker に関するところを作っていきます。 間に通">
+<meta name="keywords" content="hexo,wercker,ci,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wercker を使って Hexo の deploy を自動化する">
+<meta property="og:url" content="http://asterisks.netlify.com/2018/01/04/automatically-deploy-wercker/index.html">
+<meta property="og:site_name" content="asterisks">
+<meta property="og:description" content="こんにちは。shundroid です。 Hexo にブログを移行しましたが、一回一回記事を上げるごとに、git commit して hexo deploy するのはめんどくさいですよね。 そこで、今回は wercker を使って git commit されると自動でデプロイしてくれるようにします。 目指す運営形態 上のような形を目指し、今回 Wercker に関するところを作っていきます。 間に通">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://farm5.staticflickr.com/4635/24621049717_501df4a1cc_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4730/27712999959_dcd673bd0a_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4636/24622953277_97c4afdca5_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4690/24622954397_a245b5079b_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4639/39458968172_e3a1a4b027_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4681/38780826214_2977ef6400_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4601/38780827854_30ef8c496b_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4599/39489549651_1e10f837f0_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4681/38780826214_2977ef6400_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4595/24623007457_cf7630a9aa_m_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4681/25619668058_872b259928_z_d.jpg">
+<meta property="og:image" content="https://farm5.staticflickr.com/4687/25619626518_4335bee8f5_z_d.jpg">
+<meta property="og:updated_time" content="2020-03-17T02:25:18.650Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wercker を使って Hexo の deploy を自動化する">
+<meta name="twitter:description" content="こんにちは。shundroid です。 Hexo にブログを移行しましたが、一回一回記事を上げるごとに、git commit して hexo deploy するのはめんどくさいですよね。 そこで、今回は wercker を使って git commit されると自動でデプロイしてくれるようにします。 目指す運営形態 上のような形を目指し、今回 Wercker に関するところを作っていきます。 間に通">
+<meta name="twitter:image" content="https://farm5.staticflickr.com/4635/24621049717_501df4a1cc_z_d.jpg">
+
+
+  <link rel="alternative" href="/atom.xml" title="asterisks" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.ico">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55214112-4', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+
+<meta name="google-site-verification" content="1ThXLD31B1KlIfXQTLS-gbYe8WB5boRoUGdxuWOA04U">
+
+</head>
+<body class="monochrome">
+
+  <!-- Twitter Share Button -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook Share Button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">*.*</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/"><!--asterisks-->*.*</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">by shundroid</div>
+        
+      </div>
+      <!-- 
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+       -->
+    </div>
+  </div>
+  <div class="body">
+    <div class="search-area">
+      <input type="text" id="search-box" placeholder="Search By RegExp \*.*/">
+      <button id="search-submit">GO</button><br>
+      <div id="search-result">
+        What's RegExp?
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" style="color: #cfe3cb" target="_blank">Here</a>
+      </div>
+      <script type="text/javascript" async>
+      (function() {
+        const searchBox = document.getElementById("search-box")
+        searchBox.addEventListener("keydown", e => {
+          if (e.key.toLowerCase() === "enter") {
+            search(searchBox.value)
+          }
+        });
+        document.getElementById("search-submit").addEventListener("click", () => {
+          search(searchBox.value)
+        });
+        function search(text) {
+          window.location.href = "/search/?search=" + text;
+        }
+      })();
+      </script>
+    </div>
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog-Management/">Blog Management</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collections/">Collections</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIDI/">MIDI</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Made-by-me/">Made by me</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SERIES/">SERIES</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity/">Unity</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Virtual-Environment/">Virtual Environment</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Programming/">Web Programming</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">diary</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ace/">ace</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/">async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azure/">azure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/besiege/">besiege</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitbucket/">bitbucket</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bower/">bower</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/browserify/">browserify</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cities-sky-lines/">cities-sky-lines</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmd/">cmd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codenvy/">codenvy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conemu/">conemu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs6/">cs6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csharp/">csharp</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cygwin/">cygwin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/">diary</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll/">dll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domino/">domino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emscripten/">emscripten</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from-codeiq/">from-codeiq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gist/">gist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gpu/">gpu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hacknet/">hacknet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/halstar/">halstar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/highlight/">highlight</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hueman/">hueman</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iis/">iis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-nodejs-line/">javascript, nodejs, line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/">less</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/litjson/">litjson</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matter-js/">matter-js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/microsoft/">microsoft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/midi/">midi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mime/">mime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movejs/">movejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mozilla/">mozilla</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netbeans/">netbeans</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/niconico/">niconico</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opus-magnum/">opus-magnum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oxygen-not-included/">oxygen-not-included</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poly-bridge/">poly-bridge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/">privacy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/putty/">putty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raycast/">raycast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/">reflection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regedit/">regedit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rx-js/">rx.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sekaowa/">sekaowa</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shenzhen-io/">shenzhen-io</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spacechem/">spacechem</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sphero/">sphero</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprite/">sprite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/steam/">steam</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tis-100/">tis-100</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ugui/">ugui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity2d/">unity2d</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualbox/">virtualbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visualstudio/">visualstudio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode-ext/">vscode-ext</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wercker/">wercker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows10/">windows10</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/youtube/">youtube</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/そういえば/">そういえば</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">69</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/">2014</a><span class="archive-list-count">2</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/profile" title="Profile">Profile</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="About This Site">About This Site</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/shundroid" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://www.youtube.com/channel/UC7SEX9GABXlBaCb9vZVPIfg" title="Youtube" target="_blank" rel="noopener">Youtube</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+    <a class="twitter-timeline" data-height="300" data-theme="dark" href="https://twitter.com/shundroid_pub?ref_src=twsrc%5Etfw">Tweets by shundroid_pub</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-automatically-deploy-wercker" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Wercker を使って Hexo の deploy を自動化する
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2018-01-04
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Blog-Management/">Blog Management</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ci/">ci</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wercker/">wercker</a></li></ul>
+	</span>
+
+
+  </div>
+  <div id="toc" class="toc-article">
+    <p class="toc-title">TOC</p>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目指す運営形態"><span class="toc-text">目指す運営形態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wercker-yml-を作成"><span class="toc-text">wercker.yml を作成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#テーマの-clone-を忘れずに！"><span class="toc-text">テーマの clone を忘れずに！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-はグローバルインストールしなければならなかった"><span class="toc-text">hexo はグローバルインストールしなければならなかった</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github-から-Personal-Token-を取得"><span class="toc-text">Github から Personal Token を取得</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#チェック：プロジェクトは非公開になっていますか？"><span class="toc-text">チェック：プロジェクトは非公開になっていますか？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-yml-を変更"><span class="toc-text">_config.yml を変更</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Wercker-で-Application-を登録"><span class="toc-text">Wercker で Application を登録</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git-connections-を設定"><span class="toc-text">Git connections を設定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Application-を作成"><span class="toc-text">Application を作成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Workflow-の設定"><span class="toc-text">Workflow の設定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commit-amp-push-する"><span class="toc-text">commit &amp; push する</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#確認"><span class="toc-text">確認</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#できていなかったら・・・"><span class="toc-text">できていなかったら・・・</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#今後：Wercker-の良さを最大限活かす"><span class="toc-text">今後：Wercker の良さを最大限活かす</span></a></li></ol>
+  </div>
+  <div class="article-entry">
+    <p>こんにちは。shundroid です。</p>
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> にブログを移行しましたが、<br>一回一回記事を上げるごとに、<code>git commit</code> して <code>hexo deploy</code> するのは<br>めんどくさいですよね。</p>
+<p>そこで、今回は <a href="https://www.wercker.com/" target="_blank" rel="noopener">wercker</a> を使って git commit されると自動で<br>デプロイしてくれるようにします。</p>
+<h2 id="目指す運営形態"><a href="#目指す運営形態" class="headerlink" title="目指す運営形態"></a>目指す運営形態</h2><p><img src="https://farm5.staticflickr.com/4635/24621049717_501df4a1cc_z_d.jpg" alt></p>
+<p>上のような形を目指し、今回 Wercker に関するところを作っていきます。</p>
+<p>間に通しすぎじゃないか！？と言われるかもしれませんが、それぞれ意味があります。</p>
+<ul>
+<li><a href="https://bitbucket.org/" target="_blank" rel="noopener">Bitbucket</a>: ブログ全体の非公開リポジトリ。</li>
+<li><strong><a href="https://wwwwercker.com/" target="_blank" rel="noopener">Wercker</a>: Bitbucket の更新をチェックし、自動で Github にデプロイ</strong>←今回作ります</li>
+<li><a href="https://github.com" target="_blank" rel="noopener">Github</a>: 生成されたサイトのリポジトリ。</li>
+<li><a href="https://netlify.com" target="_blank" rel="noopener">Netlify</a>: Github の更新をチェックし、サイトをホスト。</li>
+</ul>
+<p>Github がいらなそうですが、<br>ぼくはこのサイトを、パスワードなどを含めない部分はオープンソースにして、<br>構造などを公開したいと思っているので、いります！</p>
+<p>Netlify じゃなくて <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a> でもよさそうですが、<br>性能が Netlify のほうがいいので、そっちを使っています。</p>
+<h2 id="wercker-yml-を作成"><a href="#wercker-yml-を作成" class="headerlink" title="wercker.yml を作成"></a>wercker.yml を作成</h2><p>プロジェクトのルートディレクトリに、<br>wercker.yml を次のような内容で作成します。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">box:</span> <span class="string">node</span></span><br><span class="line"><span class="attr">build:</span></span><br><span class="line">  <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">npm-install</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">script:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">echo</span> <span class="string">nodejs</span> <span class="string">information</span></span><br><span class="line">        <span class="attr">code:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">echo</span> <span class="string">"node version $(node -v) running"</span></span><br><span class="line">          <span class="string">echo</span> <span class="string">"npm version $(npm -v) running"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">script:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">configure</span> <span class="string">git</span></span><br><span class="line">        <span class="attr">code:</span> <span class="string">|-</span></span><br><span class="line">          <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.email</span> <span class="string">&lt;Github</span> <span class="string">メールアドレス&gt;</span></span><br><span class="line">          <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.name</span> <span class="string">&lt;Github</span> <span class="string">ユーザー名&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">script:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">install</span> <span class="string">theme</span></span><br><span class="line">        <span class="attr">code:</span> <span class="string">|-</span></span><br><span class="line">          <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/shundroid/hexo-theme-chan.git</span> <span class="string">themes/chan/</span> <span class="string">--depth=1</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">script:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">install</span> <span class="string">hexo</span></span><br><span class="line">        <span class="attr">code:</span> <span class="string">|-</span></span><br><span class="line">          <span class="string">sudo</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">-g</span> <span class="string">hexo</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">script:</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">deploy</span> <span class="string">to</span> <span class="string">github</span></span><br><span class="line">        <span class="attr">code:</span> <span class="string">|-</span></span><br><span class="line">          <span class="string">hexo</span> <span class="string">clean</span></span><br><span class="line">          <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line">          <span class="string">hexo</span> <span class="string">deploy</span></span><br></pre></td></tr></table></figure></p>
+<p>build のほうはデフォルトから変えていません。（デフォルトはあとで登場します）<br>deploy 側が独自です。ここには僕がハマった経験がたくさん詰まっています。</p>
+<h3 id="テーマの-clone-を忘れずに！"><a href="#テーマの-clone-を忘れずに！" class="headerlink" title="テーマの clone を忘れずに！"></a>テーマの clone を忘れずに！</h3><p>deploy 内で、install theme していますね。<br>これなのですが、テーマをクローンし忘れると、<br><code>WARN No layout: xxx</code> というエラーが出まくり、<br>空のブログが作成されますw</p>
+<p>ちなみに、 <code>--depth=1</code> を入れると、深く log を取らないので、<br>パフォーマンスの改善になります。</p>
+<p>ご自分のテーマに合わせて、クローン元・クローン先を変更してください。</p>
+<h3 id="hexo-はグローバルインストールしなければならなかった"><a href="#hexo-はグローバルインストールしなければならなかった" class="headerlink" title="hexo はグローバルインストールしなければならなかった"></a>hexo はグローバルインストールしなければならなかった</h3><p>プロジェクトにインストールされている hexo を、<br><code>./node_modules/.bin/hexo</code> として実行しようとしましたが、全く反応しなかったです。<br>npm scripts にコマンドを追加してもやってみましたが、同様でした。<br>仕方なくグローバルインストールしました。</p>
+<h2 id="Github-から-Personal-Token-を取得"><a href="#Github-から-Personal-Token-を取得" class="headerlink" title="Github から Personal Token を取得"></a>Github から Personal Token を取得</h2><p><a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">https://github.com/settings/tokens/new</a></p>
+<p>↑にアクセスして、Token を作成します。<br>チェックは、public_repo にのみ入れてください。<br>トークンができたら、暗記してください（大嘘）</p>
+<p>というか暗記できるくらいの記憶力が欲しいよ――</p>
+<h2 id="チェック：プロジェクトは非公開になっていますか？"><a href="#チェック：プロジェクトは非公開になっていますか？" class="headerlink" title="チェック：プロジェクトは非公開になっていますか？"></a>チェック：プロジェクトは非公開になっていますか？</h2><p>これから、プロジェクトにトークンを書き込みますが、<br>この時、プロジェクトが公開されていると、かなりセキュリティ的に危険です。<br>非公開にしましょう。※ブログを非公開にするのではありません</p>
+<p>Github は学生でなければ非公開リポジトリは作れませんが、<br>Bitbucket は<a href="https://asterisks.netlify.com/2016/02/16/git-private-bitbucket/">無料で作れます</a>。ぼくは Bitbucket を使っています。</p>
+<p>また、プロジェクトを公開しなければならない場合は、<br>Wercker 側にトークンを非公開で設定し、それを使うという方法もあるそうです。</p>
+<iframe class="hatenablogcard" style="width: 100%; height: 155px; max-width: 680px;" src="https://hatenablog-parts.com/embed?url=http://yuukichi.hatenablog.com/entry/2014/08/16/Hexo%2BGithub%2BWercker%E3%81%A7%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89" width="300" height="150" frameborder="0" scrolling="no"></iframe>
+<h2 id="config-yml-を変更"><a href="#config-yml-を変更" class="headerlink" title="_config.yml を変更"></a>_config.yml を変更</h2><p>プロジェクトのルートディレクトリにある、_config.yml を変更します。</p>
+<p>deploy のところですね。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://先ほどのトークン@github.com/ユーザー名/リポジトリ.git</span></span><br></pre></td></tr></table></figure>
+<h2 id="Wercker-で-Application-を登録"><a href="#Wercker-で-Application-を登録" class="headerlink" title="Wercker で Application を登録"></a>Wercker で Application を登録</h2><p><a href="http://www.wercker.com/" target="_blank" rel="noopener">http://www.wercker.com/</a></p>
+<p>↑にアクセスして、Sign up しておいてください。</p>
+<h3 id="Git-connections-を設定"><a href="#Git-connections-を設定" class="headerlink" title="Git connections を設定"></a>Git connections を設定</h3><p><a href="https://app.wercker.com/profile/connections" target="_blank" rel="noopener">https://app.wercker.com/profile/connections</a></p>
+<p>ここにアクセスして、プロジェクトが使っているリモートのサービスとリンクしましょう。<br>ぼくは Bitbucket なので、Bitbucket とリンクしました。</p>
+<h3 id="Application-を作成"><a href="#Application-を作成" class="headerlink" title="Application を作成"></a>Application を作成</h3><p><a href="https://app.wercker.com/applications/create" target="_blank" rel="noopener">https://app.wercker.com/applications/create</a></p>
+<p>ここにアクセスして、アプリを作りましょう。<br>といっても超シンプルです。</p>
+<p><img src="https://farm5.staticflickr.com/4730/27712999959_dcd673bd0a_z_d.jpg" alt></p>
+<p>まず SCM を選びます。これはプロジェクトが使っているやつですね。<br>ぼくは Bitbucket なのでそれを選びました。<br>選んだら Next</p>
+<p><img src="https://farm5.staticflickr.com/4636/24622953277_97c4afdca5_z_d.jpg" alt><br>リポジトリを選びます。これはそのプロジェクト自体ですね。<br>選んだら Next</p>
+<p><img src="https://farm5.staticflickr.com/4690/24622954397_a245b5079b_z_d.jpg" alt><br>その次は deploy key に関するやつですが、recommended でいいので Next</p>
+<p>その次は公開したいなら Make my app public ですが、<br>どっちでもいいです。</p>
+<p><img src="https://farm5.staticflickr.com/4639/39458968172_e3a1a4b027_z_d.jpg" alt><br>これで完了です。<br>色々出ていますが、すでに wercker.yml は作っているので気にしなくていいです。</p>
+<h3 id="Workflow-の設定"><a href="#Workflow-の設定" class="headerlink" title="Workflow の設定"></a>Workflow の設定</h3><p>あと少し！</p>
+<p><img src="https://farm5.staticflickr.com/4681/38780826214_2977ef6400_z_d.jpg" alt><br>上のほうのタブの「Workflows」を押します。</p>
+<p><img src="https://farm5.staticflickr.com/4601/38780827854_30ef8c496b_z_d.jpg" alt><br>「Add new pipeline」します。</p>
+<p><img src="https://farm5.staticflickr.com/4599/39489549651_1e10f837f0_z_d.jpg" alt><br>写真のように、Name も YML Pipeline name も deploy でお願いします。<br>Create を押します。</p>
+<p><img src="https://farm5.staticflickr.com/4681/38780826214_2977ef6400_z_d.jpg" alt><br>色々出るので、もう一度 Workflows を押します。</p>
+<p><img src="https://farm5.staticflickr.com/4595/24623007457_cf7630a9aa_m_d.jpg" alt><br>Editor の + を押して、<br>Execute Pipeline を deploy にして、Add しましょう。</p>
+<p>これで、build 後に deploy が走るようになりました。</p>
+<h2 id="commit-amp-push-する"><a href="#commit-amp-push-する" class="headerlink" title="commit &amp; push する"></a>commit &amp; push する</h2><p>さて、これでコミットしてプッシュしたら、<br>deploy されるはずですね。</p>
+<p>ローカルで、<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">&lt;wercker.ymlが追加されていることを確認&gt;</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">"added wercker.yml"</span></span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure></p>
+<p>ブランチ名、リモート名は自分の環境に合わせ変えてください。<br>コミット名は何でもいいですよ。</p>
+<h2 id="確認"><a href="#確認" class="headerlink" title="確認"></a>確認</h2><p><img src="https://farm5.staticflickr.com/4681/25619668058_872b259928_z_d.jpg" alt><br>こんな感じで build、deploy ともに成功すれば多分おｋです。</p>
+<p><img src="https://farm5.staticflickr.com/4687/25619626518_4335bee8f5_z_d.jpg" alt><br>Github のほうにも push されていることを確認しましょう。</p>
+<h3 id="できていなかったら・・・"><a href="#できていなかったら・・・" class="headerlink" title="できていなかったら・・・"></a>できていなかったら・・・</h3><p>ぼくがハマったポイントを改めて書いておきます。</p>
+<ul>
+<li>テーマはあっていますか（wercker.yml）</li>
+<li>Token は正しいですか（_config.yml）</li>
+<li>git config の設定はできていますか（wercker.yml）</li>
+<li>Pipeline の設定は正しいですか</li>
+</ul>
+<h2 id="今後：Wercker-の良さを最大限活かす"><a href="#今後：Wercker-の良さを最大限活かす" class="headerlink" title="今後：Wercker の良さを最大限活かす"></a>今後：Wercker の良さを最大限活かす</h2><p>さて、これで自動 deploy ができました。<br>しかし、まだ改善点はあります。</p>
+<p>hexo を毎回グローバルインストールするのもあれなんで、<br>すでに hexo が入った box を使いたいですね。</p>
+<p>wercker らしい感じもします。</p>
+<p>やろうと思いましたが、ちょっと疲れちゃって挫折しました。<br>とりあえず現状で動くので、将来的に直します。</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.j" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+    <a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-url="https://dev.twitter.com/web/tweet-button" data-via="twitterdev" data-related="twitterapi,twitter" data-hashtags="example,demo" data-text="custom share text" data-lang="ja" data-dnt="true">
+    Tweet
+    </a>
+    <div class="fb-share-button" data-href="http://asterisks.netlify.com/2018/01/04/automatically-deploy-wercker/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://asterisks.netlify.com/2018/01/04/automatically-deploy-wercker/">シェア</a>
+    </div>
+    <a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fasterisks.netlify.com%2Fatom.xml" target="blank"><img id="feedlyFollow" src="http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png" alt="follow us in feedly" width="71" height="28"></a>
+  </footer>
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'asterisks'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2020 asterisks - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+  <title>top - asterisks</title>
+  <meta name="description" content="JavaScript, C#, Unity など、様々な情報をお届けします。">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="asterisks">
+<meta property="og:url" content="http://asterisks.netlify.com/index.html">
+<meta property="og:site_name" content="asterisks">
+<meta property="og:locale" content="ja">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="asterisks">
+
+
+  <link rel="alternative" href="/atom.xml" title="asterisks" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.ico">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55214112-4', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+
+<meta name="google-site-verification" content="1ThXLD31B1KlIfXQTLS-gbYe8WB5boRoUGdxuWOA04U">
+
+</head>
+<body class="monochrome">
+
+  <!-- Twitter Share Button -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook Share Button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">*.*</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/"><!--asterisks-->*.*</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">by shundroid</div>
+        
+      </div>
+      <!-- 
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+       -->
+    </div>
+  </div>
+  <div class="body">
+    <div class="search-area">
+      <input type="text" id="search-box" placeholder="Search By RegExp \*.*/">
+      <button id="search-submit">GO</button><br>
+      <div id="search-result">
+        What's RegExp?
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" style="color: #cfe3cb" target="_blank">Here</a>
+      </div>
+      <script type="text/javascript" async>
+      (function() {
+        const searchBox = document.getElementById("search-box")
+        searchBox.addEventListener("keydown", e => {
+          if (e.key.toLowerCase() === "enter") {
+            search(searchBox.value)
+          }
+        });
+        document.getElementById("search-submit").addEventListener("click", () => {
+          search(searchBox.value)
+        });
+        function search(text) {
+          window.location.href = "/search/?search=" + text;
+        }
+      })();
+      </script>
+    </div>
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog-Management/">Blog Management</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collections/">Collections</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIDI/">MIDI</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Made-by-me/">Made by me</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SERIES/">SERIES</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity/">Unity</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Virtual-Environment/">Virtual Environment</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Programming/">Web Programming</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">diary</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ace/">ace</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/">async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azure/">azure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/besiege/">besiege</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitbucket/">bitbucket</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bower/">bower</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/browserify/">browserify</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cities-sky-lines/">cities-sky-lines</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmd/">cmd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codenvy/">codenvy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conemu/">conemu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs6/">cs6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csharp/">csharp</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cygwin/">cygwin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/">diary</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll/">dll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domino/">domino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emscripten/">emscripten</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from-codeiq/">from-codeiq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gist/">gist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gpu/">gpu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hacknet/">hacknet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/halstar/">halstar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/highlight/">highlight</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hueman/">hueman</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iis/">iis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-nodejs-line/">javascript, nodejs, line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/">less</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/litjson/">litjson</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matter-js/">matter-js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/microsoft/">microsoft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/midi/">midi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mime/">mime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movejs/">movejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mozilla/">mozilla</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netbeans/">netbeans</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/niconico/">niconico</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opus-magnum/">opus-magnum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oxygen-not-included/">oxygen-not-included</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poly-bridge/">poly-bridge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/">privacy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/putty/">putty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raycast/">raycast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/">reflection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regedit/">regedit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rx-js/">rx.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sekaowa/">sekaowa</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shenzhen-io/">shenzhen-io</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spacechem/">spacechem</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sphero/">sphero</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprite/">sprite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/steam/">steam</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tis-100/">tis-100</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ugui/">ugui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity2d/">unity2d</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualbox/">virtualbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visualstudio/">visualstudio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode-ext/">vscode-ext</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wercker/">wercker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows10/">windows10</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/youtube/">youtube</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/そういえば/">そういえば</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">69</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/">2014</a><span class="archive-list-count">2</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/profile" title="Profile">Profile</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="About This Site">About This Site</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/shundroid" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://www.youtube.com/channel/UC7SEX9GABXlBaCb9vZVPIfg" title="Youtube" target="_blank" rel="noopener">Youtube</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+    <a class="twitter-timeline" data-height="300" data-theme="dark" href="https://twitter.com/shundroid_pub?ref_src=twsrc%5Etfw">Tweets by shundroid_pub</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2020/03/14/vue-animate-component/">
+  Vue で Web Animations をかっこよく実装するライブラリを作ってみた
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2020/03/14/vue-animate-component/"><span class="article-date">
+  2020-03-14
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。あけましておめでとうございます(遅)10か月振りくらいの投稿ですね。
+高校が休みになっているので、勉強・開発に励んでおりました。
+そこで、Vue.js で Transition だけでなく、Web Animations を取り入れたい状況が出てきました。
+現状で Vue.js で Web Animations を使う場合そこで次のようなコードを書いたのですが、これは Vue.js としてはふさわしくないですよね。
+123456789101112131415161718192021222324252627282930313233343536373839404
+          …
+          <a href="/2020/03/14/vue-animate-component/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/05/01/campbell/">
+  「キャンベル生物学」を読んで
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/05/01/campbell/"><span class="article-date">
+  2019-05-01
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/Yx2AA2EbhD7MKZxEbxISUAVXWIvzcQJ-6Z6POhSC9BDaPS4VgJ5JiDgGODObO4LEl1Gh3md205nD-_eyA4qYRutgg0RxbpCRAH3fZaI5qUvHDcFlu5VeUehu2NRap2Fp_13MY1EKKFz7UisjnznbChWyJJqs4rkyCy4crEh-8O58KJRrkdqm7GjO0j0S1m4vBZbv0MSNlgLqT9iTvOZLM-90-w3fP6cr5lhROrb0BZQ2md8CBAxGFH_AsTG7kKkGs5hveETBooVnbaWiC02cVHYQNE7vx9Wr0h7-21kbFBP4UjPX0-E2fUrnV2M5PTqM8ICXtLKo17-XA8h3y1f2TS1fu6SgftVwuXeDEE_BcHXTC0SAUL5dU_AwGrLx2nX2-AnygeXS3IEO18GLdXw1cbrEoegmA0GmCJTOu0JV45mWf3VSKOty6pDeqZc9FhGA8PSTPkiauTcIQ49H9Ox99vKB2wj5rim4FII4eGMNxxDtPn14oZkPzoVqOFB8tWgNTgupM2euub9WpGuCMeBkOmfabqDqz8QZHXmPjmc4S4Y1IZev6c3yvv_olRx5Wcyos1QsFYb2xiHKi6z1t97KDCg-HbhjtthBE421A7fEzDowAlTeSx7lYoD7buVghH2psskyO_PgvCzPVNu_1bWFJdUMWtDsCMiPJqnV8p-SHNjA0IUH69OF-J_JNn5h0VBEeN3hX2b0aLHnVutknZLZgi5xQw=w773-h464-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。新年度・新時代が始まりましたね。
+さて、昨日「キャンベル生物学」という太い本を読み終わったのでその感想をまとめようと思います。
+概要キャンベル生物学 原書11版は1444ページ、目測でA4サイズくらいの本で、生物学の幅広い分野の基礎が学べる本です。
+「高校生にとっても最適の教科書」とありますが、まさにその通りで、解説が非常に丁寧でわかりやすかったです。(英訳だからか独特の言い回しがありますがそれは慣れます)
+わざわざどうしてこの本を読んだのかといいますと、高校の生物の先生に勧められたからです。
+最初は割と緩く読んでいたんですけど、このままだといつまでたって
+          …
+          <a href="/2019/05/01/campbell/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/04/01/nuxt-v2-speed-up/">
+  Nuxt v2 のビルドが重すぎるので軽くする
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/04/01/nuxt-v2-speed-up/"><span class="article-date">
+  2019-04-01
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/sFFqfshR7YA3_V95ObkPaZk0cCXpgHdIK16XA4nVFX4iIYY5Ii3XoWnCoIPbJAAqRWnuiXvHHoDYWH6LkaOjN46XCV6KWPMbtpr-QwFKvvCraXZ7JJ0Jwu3wPjRxBYqBjIQvmSyzTReSSNT1oPOPqpf0VLJIYO_ywYOM9hj3gRcmuY13N1MKlvb-fa6Aq6A7tL9Whi-xGJn1e_KKfY6PCZqpwNHTWBgt67R-ie8ewsv9wfYegGSLC2Bj8YS2988m4ju3Q9OxCJBTnlm4sBzGIQnLjCmEkmQ3Izd7o2pKCW90ip01Am95NPN4lm1jsEKy1-djQcG32gnhx02_eI3PIMa4_AxH1EAqNE8c2H6ZNlR5SEoIZEUOxaPahXC-_D-Okc4lmfw5tRQOFwU6gu6KYKGxfNYXoYljtHUdmWSCPRN38RoN28HVQ2JkX8bmRACZDAm24sE29HYS19dYCBfrcDm32l-mTKB_4tdsGhUiXb4T2CF8X04D6oWDt3rjq3a6VeGBs_Q4uOWXQSml6Q5EebhHiBbrd-BihgjiRyyWP3UVJOxkWVRQzcHO67dlw0asrsh9iZ4QDjJZkNQJ2E8_Fi8mEdg5mahhjt2CuXMQzA6PKmioBst5sQ_wlFa28Bu_nqn1XlHfF1Xzfi5Qr3pNqFIQsL_719Zno179I1FK7KscZTXZ0RmyQ1KMle3O2JgagI_PCVexW5KFmesVhNKmgQ7C=w592-h324-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。お久しぶりです。記事を書くたびにお久しぶりになりますねw
+早いもので高校に入学してから1年になります。この1年はプログラミング以外のことにもいろいろチャレンジして、充実した高校生活を送ることができました。
+クラス替えがドキドキ…
+さて、今回は割と今年(少ない機会でも)愛用した Nuxt のビルド速度を向上させる方法を紹介します。
+あ、そだそだ、今年はプログラミングを目的にしてプログラミングすることは少なかったんですけど、割と学校の発表で(Nuxtを使って)デモアプリを作ったり、ディベートの授業で電子投票用のシステムを作ったりと、「手段」としてプログラミング
+          …
+          <a href="/2019/04/01/nuxt-v2-speed-up/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/11/09/codenvy-vue-starter/">
+  フリーで使えるクラウドIDE「Codenvy」を使って Vue.js の開発を始めてみる
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/11/09/codenvy-vue-starter/"><span class="article-date">
+  2018-11-09
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codenvy/">codenvy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/fgn2IlNpZzRnc2cxbqLFx5ZVn3ncPLhzZZWXA0FKULyCWJHpz084pmQAlEPRTJlPg3qUy1jFnjhzQ9hpOnPHOmsY0IPrrb-tGKuqwizXsVqb7TUHKuUeOQU9RpxH57NMNUtHZfOGJtPMs4TqjCgOj7mMz7HHa51s997Je-aYcbkWGE3JWLqZR12nZDJnfB-CzrGzOwKwZp2gCOVBKs-5iJYZ9KMu2Eq7AYXdj2nBmRzWh-8YihneVD9rNk73Olo5SsaGMG-wo0cLdjTqjKphTWBAPvuFyg-VSN-CgCNT1GP9M97ehNVh9YIjdbG9tnkD56hNv8LPYR0Rk7vdq_5St0NF5bqBoFx6VP5dfXMt5Fg2Cdi8grFIbB7Au6T_JLUKHC30Aj1agEpLbKGGLa368SeJxSUGiX_tA54F_lPvsWBaOY4k73GZV8MhSgDmQAuy7tDiz81GU4oaY5GaisqrIt7rrrMITIQW1RmXJIEs8sjguf9m2kffA2zqAcv4NdYys7XMBv8YR-WHnppaE3KYlGtcLnZ8z5s8gfICs2msiwIzUDJhBUTm2C06r4qD6zOtlgWkoAI4XMb_YIdAReGj4Gjx__AniU5vCAGde4iROcIIjgaVUrqXHQwZeyco8inC9nW5k148UGV61ELvyLU2A_1_zlPUASAdqZKadxdABLD2ZJjJmzWI2PVKEj01PTtV9xJ6auRI-91Owgb2g7eNR5eL0fMabcXgM4nk=w1304-h814-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。高校生活が本格的になってきました。楽しいですが忙しいですね。
+さて、今回は、友人とアプリを１つ開発することになりました。そこで、環境構築などを友人の pc で行うのは手間がかかるため、その必要がない、クラウドIDEを用いることにしました。使い方などを記録しておこうと思います。
+サービス・ライブラリなど
+Vue.js : Web アプリ開発のフレームワークです。最近ホットになってきてうれしいです。
+クラウドIDE : クラウド上で動くIDEです。環境構築の手間がいらないので、スマホで動作するものもあります（codeanywhereなど）
+Eclipse Ch
+          …
+          <a href="/2018/11/09/codenvy-vue-starter/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/09/30/twitter-frozen/">
+  Twitter で誤凍結されてから解除されるまでの道のり
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/09/30/twitter-frozen/"><span class="article-date">
+  2018-09-30
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/3VveY6CumlrQlwgweSX_TkFtRZy96qyAsDa_qTKfoCYdAKtjuvkSJnAzYMQXaD-K6ZMWDMhy3H2pA03iHJpyyNfb-QlGGGjBe-P0EKF0yExcsLn1LHdcmD5a24Dn5MDZ0axk05SUqJfvEb1A9kzWnIWrXsrdGNJtIGSzFnu3N7YuZsky4FM9dq0Ap_8Yp00MV2KZcb1CkzXXTfubDjjB5SnEk2-1ytixw-y5nre9J248Pam2Ks9-Lmq7Whk7jfegbF0o04hYOREMw4rxJNnCE-3v9hzc4srR-lwvvtwJjEqhRCL3fcc6vJUPPX188tE1ZxCvfY4eqyprpUz_xcKZTECXQqfofAi_q6QybABbJ48WPhULb74ucOYbJYEgCX_J7eycERhan_YMlLy7xmXghNhahu-MDe7mMO0x5t_fnd49AHx0oeAWTgUIW61GrVbrSCDqpKU9HMHQb3r7BC0Whn_4h_3CQ2DfWWUTdeSJXq9Y8KBHtzkPmrA-XPVO4kjP4hFTde2ml1T0-lTP0aK9dEN9MP_dh6UKhz2bmhtTlVYBQFwiuJyn_yqUVpufRRl2LjRzCbGo2trMguqSXpvQVsA6HkLaPCAu8Iq0mb3D7RsHUcRLzN9Pca1xFRTbFKgoQGEb0kBqfLuWL_489_JkcNPEeQQ7-no42tjgmV9tQoA8vu56ubXzAnWe=w660-h494-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。昨日、本垢の Twitter アカウントが、なぜか凍結されてしまいました。
+正直かなり焦ったのですが、今日の朝、凍結解除のお知らせが入っていました。今回は、その道のりについて書きたいと思います。
+凍結の種類まず、Twitter の凍結の種類について書きます。
+警告凍結一番軽いやつです。本人確認したら解除されます。
+c.f. ロック「ロック」というものもありまして、僕が調べた限り、ロックと警告凍結の違いがよくわかりませんでした。わかる方は教えてください。
+
+画像は本垢が凍結されたとき、別垢を作ったらなぜかロックされたときの物です。短時間にフォローをしすぎたの
+          …
+          <a href="/2018/09/30/twitter-frozen/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/08/23/for-programming-beginner/">
+  僕がプログラミングを始める人に、「言語なんて何でもいいのだ」という理由
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/08/23/for-programming-beginner/"><span class="article-date">
+  2018-08-23
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/RSoro3rvGbaP6BjzlvTuXGdtnUGI9pS7JAD8aJhHfkUVQkLJCJIVtBaP9CdmnDtkOxLVD2SJXIzklzxDKlRN0EczVeD0xzZ0kYQxdihnYqjzn3EL_ZL20xdE5tS6S2sUZjFXsBfauCDvtvEH8zRz1qvvVjtD18Xf4YqwoBGuLIs5IiNb4mOG0kDH-_ysF9oBryG429NGCwXHhku9nIiw7arEjV6N1q_itnKsGTRneENi4kRupfdpL9ETv1T07NMTOmIv2AfV4z4d85ybkOGmhDWUnct7MrWHxsgIHIwq5fkQG8gO7JDFrSB64Dlj_NUCFvvdbWtWbc400492kC16Z5hbCIVlMgzjgV-EBcDjwqRlwB7rl1GVrnQlymk_Pbfg7SesRa5gfzoh20a3Zdwaz3yQBFsbw4TBHCjYUEp0wnCCKoI_LuvgJRQgDYpWWW3Ix4l5IOO9H3w2PpDBzEErJ8ZYvsQBZcquMNdHbVQOYmsgyBXyxqmWik1zNjppK0op2ZEkOcXyV-pV8u0CVYwvgiLJePN2ikVcv-aE5-U_2ymfNgsWZq_PmZNysHdy5IMPPb8KDL3htjphRVkPdT5Q3kBXzGP8uylt5jmCddV_gg3lA-zmthyEBitQVQQg15Vd2zR1jfCZ5WKSHeR25uYAkhdYLeNMrVSLUPph5zwmzvdLe5xne1UBgmU2=w640-h425-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。夏休みが終わりに近づいてきました。
+この夏にプログラミングを始めようという友達がいて、どのようにプログラミングを教えるのが効率的なのか、改めて色々考える機会がありました。
+そこで思ったことを今回は書きたいと思います。
+プログラミングを学習するときに大切なこと
+よく「Python がおすすめだ」とか「Unity できるやつかっこいい」とかいう言葉を聞くことが多いのですが、僕はこれらの意見はプログラミングを始めるにあたってはそれほど関係ないと思っています。
+これらの意見の根拠で、例えば「構文が簡略だ」というのであれば、僕は Scratch をおすすめすればいい
+          …
+          <a href="/2018/08/23/for-programming-beginner/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/08/08/fixed-my-note-pc/">
+  ノートパソコンを直した話
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/08/08/fixed-my-note-pc/"><span class="article-date">
+  2018-08-08
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/5dhIoadZDBsZlroft2R85r80BsVqpPEzvBpEKSf0PaNseAl7EVWNfpStKmlcAAUb6aUDWWDFQgIk2MZfNSLKRCkjpSFsFveyuz1TDpdF62PFl3xApeZC1GOq6qhHDnYQcCW-9t0v_ZkTQ5v-R1yomYOUA5E5bspNEQd94gGnLWEwevhAwdcyeEZ7cOws6cVKsB68tmepKfj4W6x9uo3Z5eUx1Cy0xFfKzCy4BD0fahXgjl3NTnOmu0lsoAtYietqZQRlgkN74qbqzXlOx83voOc9ljWZ3GH5IfJre7IY68xCJtVp0XExYbqqdBiZrR8jphLk55qafYHg8EaNNbl-JF2Q0vBji-BjSrByKoyebkvX1T9OnwQ3-F9QE81t4rOIPEriW5gEqCct760IVkWB4JFHKKlAApKmYLpVSokGsD4rmkGw2QvYga3yNOBMd2xJyF151TcxmieEDXkf3pTRByibwdyj0AiBOZ_HJobVEed6GJcaiw4s7_zIm2QKDJNbQNqz_cUBXp4SD6SCBZ2_Y0JUECE_ZVh93aVwRdj3VREo3zkrSPTaFN0-Fs1i4NxZxTqs2vdb5OxKpG-Phx6yJVkb48tJ0_5xWIMwpqXy5Jy7S-pEoVIi2ToiZ9B5SjB8aslKbqmBICyNVECWInwL9j5714f0d9SylSPPDNEfUwY2I-INHCBNWHra=w1718-h966-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          ※今回の記事の内容を実践することは本当に自己責任になります。というか分解しないことをおすすめします。
+ちなみにPC落としてから突然電源が落ちる問題が発生していたけど分解したら内部でねじが緩んでいたことが発覚しそこをきつくしたらなんと電源が落ちなくなりました。つまりノートパソコン直した―――――――やったーーーーーーーーーーー&mdash; shundroid (@shundroid_pub) 2018年8月7日
+
+
+こんにちは。shundroid です。2年前の夏、ノートパソコンを落としてしまい、そこから突然電源が落ちるようになっていた僕のノートパソコンが、
+この度、なんと、直りました！今回は
+          …
+          <a href="/2018/08/08/fixed-my-note-pc/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/07/14/line-teacher-bot/">
+  先生の名言を画像にして排出するだけの、誰得かわからないLINE BOT を作った話
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/07/14/line-teacher-bot/"><span class="article-date">
+  2018-07-14
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript-nodejs-line/">javascript, nodejs, line</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://lh3.googleusercontent.com/UwtQILPQZAXev82RZIzZ3Oz8zacwiw8Fsyu77PSw5dMSgFjT0wkkwlplbOt929sGDFNER0rDLtUcohDDK23MTlQSlrFF14gJmtSsnSu5VHtm-ltLUGSIBO4MWevje_iBXZK9_4jFfiuLsNtmeuNZIHQ7HjezlbhYporWsEUlZww7MSlMsesYth6-L--8aH52zl0Mp49PK21BKj6d4AZnvXu8CU_lIJEUEz-wIUARip90ZeU1PJNptv57irMpslTLXwPSXqkUCdWZkmHngRfUl5TCvq8onJ2pdgcNGAy1zna7NzbmIIHwB81jACYNIPBhMr79T6k8ANdsTkd93hXIPLzwnxwDTG2uzcS5g-7BootW5jTl6tPuWcN0ylc7GN1F6QMOJne3ndiIIXIkxH7uJlYPmWMxdvlKG3WfKMoUZ84tNBu2r7beFxwSoYJh3s46Ktwo11AN5_yKToWCQ1TJnknpPe83L7vfnEvJ3bG1zAODWQWLqKNgdRKPxOn1Y7qiav09aPrlrDHciMyN8xRWQQQOdyBxYe2utl0EXNR_WYZVgM_Z3TVo2CBg9TftD1U4WuX8wMlYFp0leWUoTpEdAy5phPC2KYWkec2gY0HSiXqK2E_WGE54MUr9WacsjlU=w1073-h303-no" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。お久しぶりです。期末考査も終わって、一段落したところです。
+何かひと書きしてみたいところだったので、クラスメートみんなで使える、何かを作ってみたいと思いました。
+そこで LINE BOT の開発をしてみることにしました。
+作ったもの「某先生と会話bot」bot完成しました。近日中に仕組みをブログに公開します。 pic.twitter.com/oxhvmIq1fe&mdash; shundroid (@shundroid_pub) 2018年7月14日
+
+
+「（名前）、○○」と話すと、某先生の写真と文字を合成した画像を返すbotです。特徴はただ一定の画像を返
+          …
+          <a href="/2018/07/14/line-teacher-bot/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/06/03/galois-gen/">
+  ガロア理論ジェネレータを作った
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/06/03/galois-gen/"><span class="article-date">
+  2018-06-03
+</span>
+</a>
+        
+
+        
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm2.staticflickr.com/1725/40717252540_6ff959e6e8_o_d.gif" alt>
+      </div>
+      <div class="article-entry">
+        
+          Dear Mr. Tomohide Suzuki
+https://t.co/rXsQJEGyF7できた！！！！&mdash; shundroid (@shundroid_k) 2018年6月2日
+
+
+こんにちは。お久しぶりです。shundroid です。高校生になりました。
+いやー忙しい。最近もテストがありましたが、テスト範囲が広すぎて本当に大変でしたー。
+そこで疲れを癒やしたいのもあり、１つサービスを作ってみました。ガロア理論ジェネレーターです。
+https://galois-gen.netlify.com/
+製作期間は２日です。今回はどうやって作ったかなどを紹介したいと思います。
+これを入
+          …
+          <a href="/2018/06/03/galois-gen/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/02/07/hexo-search-result/">
+  Hexo で検索結果を表示するページを生成するプラグインを作った。
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/02/07/hexo-search-result/"><span class="article-date">
+  2018-02-07
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。お久しぶりです。
+今回は新しく作った Hexo のプラグインについて、仕組みや工夫したところなどを書きたいと思います。
+追記：2018/02/08client 側の工夫したところが消えましたｗ多分 vscode-vim で insert モードを解除せずに消しちゃったからかなとりあえず大まかには書いておきました。
+概要hexo-generator-search で生成された search.xml を使って、検索結果を表示するページを作成します。
+このブログでも使用しています。サイドバーの検索ボックスで検索すると、このプラグインで生成されたページが表示されま
+          …
+          <a href="/2018/02/07/hexo-search-result/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/01/04/spacechem-sync-3/">
+  【Spacechem】Sync-3 何回かに１回
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/01/04/spacechem-sync-3/"><span class="article-date">
+  2018-01-04
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/">SERIES</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/">Spacechem-Tips</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/Game/">Game</a></li></ul></li></ul></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spacechem/">spacechem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4599/24624685777_5bc4763e5b_o_d.gif" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。
+
+Spacechem の解法、Sync の３つ目です。
+今回は Sync コマンドの応用の使用法の１つである、
+何回かに１回
+について説明しようと思います。
+具体的には、
+１つのウォルドが何回か実行するたびに、もう１つのウォルドが１回処理する
+というのを繰り返すことです。
+例： ヘーパイストスIV KOHCTPYKTOP例として、ヘーパイストスIV のサイドストーリー、KOHCTPYKTOP の、ケイ素の分子を作り出すところを見てみましょう。
+
+めちゃくちゃ長い処理になってしまったので、早送りしていますが、
+赤のウォルドで２回輪の形をしたケイ素の分子を作った後、青のウォルドで１回
+          …
+          <a href="/2018/01/04/spacechem-sync-3/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/01/04/automatically-deploy-wercker/">
+  Wercker を使って Hexo の deploy を自動化する
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/01/04/automatically-deploy-wercker/"><span class="article-date">
+  2018-01-04
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Blog-Management/">Blog Management</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ci/">ci</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wercker/">wercker</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4635/24621049717_501df4a1cc_z_d.jpg" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。
+Hexo にブログを移行しましたが、一回一回記事を上げるごとに、git commit して hexo deploy するのはめんどくさいですよね。
+そこで、今回は wercker を使って git commit されると自動でデプロイしてくれるようにします。
+目指す運営形態
+上のような形を目指し、今回 Wercker に関するところを作っていきます。
+間に通しすぎじゃないか！？と言われるかもしれませんが、それぞれ意味があります。
+
+Bitbucket: ブログ全体の非公開リポジトリ。
+Wercker: Bitbucket の更新をチェックし、自動で Gi
+          …
+          <a href="/2018/01/04/automatically-deploy-wercker/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2018/01/03/moved-blog/">
+  ブログ移転しました！
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2018/01/03/moved-blog/"><span class="article-date">
+  2018-01-03
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/diary/">diary</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4598/38755022294_89ab7bb022_o_d.png" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。あけましておめでとうございます。今年もよろしくお願いします。
+
+さて、ブログを WordPress から Hexo に移転しました！ここではブログ移転の経緯などを説明していきたいと思います。
+今までメールアドレスで購読していただいた方いつもありがとうございます。Hexo ではデフォルトでメールアドレスによる購読ができません。
+今後プラグインを使い、対応させていくかもしれませんが、それまで、前のサイトでも使っていた、Feedly などの RSS リーダーによる購読をよろしくお願いします。
+
+移行の背景重かったWordPress は、ページを表示する際、動的に
+          …
+          <a href="/2018/01/03/moved-blog/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/31/spacechem-sync-2/">
+  【Spacechem-tips】Sync-2 交互に実行
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/31/spacechem-sync-2/"><span class="article-date">
+  2017-12-31
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/">SERIES</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/">Spacechem-Tips</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/Game/">Game</a></li></ul></li></ul></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spacechem/">spacechem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4647/39401220871_085e944a50_o.gif" alt="spacechem-sync-alternate">
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。
+
+Spacechem の解法、Sync の２つ目です。
+今回は Sync コマンドの応用の使用法の１つである、
+交互に実行
+について説明しようと思います。
+具体的には、
+１つのウォルドの処理が終わったら、もう１つのウォルドの処理を行う
+というのを繰り返すことです。
+例: ヘーパイストスIV KOHCTPYKTOP例として、ヘーパイストスIV のサイドストーリー、KOHCTPYKTOP を見てみましょう。
+
+ヒ素とホウ素を、１つずつ交互に ψ に出力しています。
+これも Sync コマンドを使って実装しています。
+どのように実装しているのか見てみましょう。
+
+Sync コマンド２つ
+          …
+          <a href="/2017/12/31/spacechem-sync-2/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/31/spacechem-sync-1/">
+  【Spacechem-tips】Sync-1 「待機」としての「同期」
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/31/spacechem-sync-1/"><span class="article-date">
+  2017-12-31
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/">SERIES</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/">Spacechem-Tips</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/Game/">Game</a></li></ul></li></ul></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spacechem/">spacechem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4594/38692049194_d773d64f8c_o.gif" alt="spacechem-basic-of-sensing">
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。
+
+Spacechem の解法、Sync の１つ目です。
+今回は Sync コマンドの使い道の１つである、
+「待機」としての「同期」
+について説明したいと思います。
+Sync の基本の使い方その前に、まずは Sync の基本的な使い方を説明します。
+Sync は、基本的に
+２つのウォルドのタイミングを合わせる
+ために使います。
+例として、アルコノストの１ステージ目「検出の基本」を見てみましょう。
+
+このように、２つのウォルドが、自転車のペダルのように、ぐるぐると回っていますね。
+
+２つのウォルドのタイミングを合わせることで、原子同士の衝突を防いでいるのです。
+２つのウォルドで操作す
+          …
+          <a href="/2017/12/31/spacechem-sync-1/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/31/spacechem-points/">
+  Spacechem の重要テクニック集！
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/31/spacechem-points/"><span class="article-date">
+  2017-12-31
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/">SERIES</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/">Spacechem-Tips</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/SERIES/Spacechem-Tips/Game/">Game</a></li></ul></li></ul></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spacechem/">spacechem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4726/38521809415_900b55c71a_o.png" alt="spacechem-sync">
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。最終ステージ「そして結末へ（End Of The Line）」をクリアすることができました！
+
+そこで、今まで僕がクリアしていくうえで役に立った解法のポイントがあるので、それらを紹介していこうと思います。
+僕が大事だと思う解法のポイントは、ずばり３つ！
+
+Sync
+回転
+Flip Flop
+
+です！それぞれについて紹介していこうと思います。
+徐々に記事を公開していきます。公開まで少々お待ちください。
+Sync
+
+
+「待機」としての「同期」 
+交互に実行 
+何回かに１回 
+
+回転
+
+点対称な分子の生成 その１ 
+点対称な分子の生成 その２ 
+点対称な分子の生
+          …
+          <a href="/2017/12/31/spacechem-points/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/31/spacechem-cleared-end-of-the-line/">
+  【Spacechem】最終ステージ「そして結末へ」クリアした！
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/31/spacechem-cleared-end-of-the-line/"><span class="article-date">
+  2017-12-31
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Game/">Game</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spacechem/">spacechem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4739/38520580595_6cd0b8e10e_o.gif" alt="end-of-the-line">
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。shundroid です。2017 年も今日で最後ですねー。早いなあ
+そして 2017 年中に、なんと、Spacechem をクリアすることができましたーーーー！！！！！！
+今年の11月、オータムセールの直前に定価で購入しました。そこから 148 時間プレイして、なんとかクリアに至りました。
+クリア時の映像
+
+解説クリアする確率を上げたかったため、クリア時の映像より貯蔵タンクが増えています。
+
+
+基本は相手を動かさないことです。そのために高頻度でレーザーを発射して相手の動きを止め、ミサイルもバンバン打ちます。Ω原子が徐々にたまってしまうのが大変です。
+感想本当に難しかったです。
+
+
+          …
+          <a href="/2017/12/31/spacechem-cleared-end-of-the-line/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/30/bought-oxygen-not-included/">
+  【Steam】Oxygen Not Included を 20% OFF で買った
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/30/bought-oxygen-not-included/"><span class="article-date">
+  2017-12-30
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Game/">Game</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Game/Collections/">Collections</a></li></ul></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oxygen-not-included/">oxygen-not-included</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="https://farm5.staticflickr.com/4598/24516168637_2852118f5f_o.png" alt="Steam Winter Sale ONI 20% OFF">
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。メリークリスマス！（遅い）Steam でついにウィンターセールが始まりましたね！（遅い）
+そこで、何のゲームを買おうか精査してきたわけですが、
+今回、ついに買うゲームが決まりました！そのうちの一つは、Oxygen Not Included です！
+
+今年の５月から我慢してきたゲーム、20% OFF で購入できました！
+早速プレイしてみたので、紹介したいと思います。
+45時間プレイしました。45時間でまだ Cycle 48 かよ！と突っ込まれそうですが、ここにはかなりの苦労があったのです。
+セーブデータ１つ目１つ目は、Cycle 90 くらいまで進んでいましたが、まさかの、浄水をため
+          …
+          <a href="/2017/12/30/bought-oxygen-not-included/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/30/game-points/">
+  shundroid 式ゲームの評価ポイント
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/30/game-points/"><span class="article-date">
+  2017-12-30
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Game/">Game</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/steam/">steam</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        
+      </div>
+      <div class="article-entry">
+        
+          みなさんこんにちは。shundroid です。冬休みが始まりました。2017 年ももうあと少しですね。
+ぼくは受験生なので、ものすごく勉強をしています。これは冬「休み」なのか！？今までが休みだったかの如く勉強をしています。
+そのためあまりブログの更新ができないです。ごめんなさい。
+そんな中でも、Steam のウインターセールがやってきたので、ゲームをいくつか買いました！（あまりできていませんが）
+紹介したいのですが、その前にまず、どのような基準でゲームを評価して、選んでいるのかを説明したいと思います。
+評価のポイント独創性ゲームのアイデアが独創的で、面白いかどうかを判断します。
+誰も思いつかな
+          …
+          <a href="/2017/12/30/game-points/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/12/16/dont-use-mouse-in-vscode/">
+  【2017年末】「マウスに触らない」Visual Studio Codeを目指して
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/12/16/dont-use-mouse-in-vscode/"><span class="article-date">
+  2017-12-16
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Web-Programming/">Web Programming</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Web-Programming/Programming/">Programming</a></li></ul></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gist/">gist</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode/">vscode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode-ext/">vscode-ext</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-thumbnail">
+        <img src="http://polaris-bear.lolipop.jp/shunroom/wp-content/uploads/2017/12/vim.gif" alt>
+      </div>
+      <div class="article-entry">
+        
+          こんにちは。インフルエンザはほぼ治りました shundroid です。もう 2017 年も終わりですね。
+そこで今回は今年が終わる時点での、ぼくの Visual Studio Code の開発環境を紹介していこうと思います。多分これから変わることはないと思いますので・・。
+コンセプトマウスを触らない
+もともとぼくは Vim というエディタで開発をしてきましたが、auto-complete とかを入れまくったら、重くなってしまい、ほかのエディタで Vim っぽくできないかと、Spacemacs や、Atom など試してきて、そこで一番高速で高機能な Visual Studio Code に落ち着
+          …
+          <a href="/2017/12/16/dont-use-mouse-in-vscode/" class="article-read-more">
+            Read More
+          </a>
+        
+        <div style="clear: left"></div>
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+
+
+  <div class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+  </div>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2020 asterisks - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.post-list {
+  position: relative;
+  padding-left: 0;
+}
+.post-list .post-list-item {
+  padding-left: 20px;
+  margin-bottom: 40px;
+  list-style: none;
+}
+.post-list .article-info {
+  font-size: 13px;
+}
+.post-list .article-entry {
+  font-size: 14px;
+}
+.post-list .article-entry .article-read-more {
+  font-family: 'Electrolize', sans-serif;
+}
+.post-list .article-thumbnail img {
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+}
+@media mq-mobile {
+  .post-list .post-list-item {
+    padding-left: 8px;
+  }
+  .post-list .article-thumbnail img {
+    float: none;
+  }
+}

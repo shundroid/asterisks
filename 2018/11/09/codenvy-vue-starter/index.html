@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+  <title>フリーで使えるクラウドIDE「Codenvy」を使って Vue.js の開発を始めてみる - asterisks</title>
+
+
+<meta name="description" content="こんにちは。shundroid です。高校生活が本格的になってきました。楽しいですが忙しいですね。 さて、今回は、友人とアプリを１つ開発することになりました。そこで、環境構築などを友人の pc で行うのは手間がかかるため、その必要がない、クラウドIDEを用いることにしました。使い方などを記録しておこうと思います。 サービス・ライブラリなど Vue.js : Web アプリ開発のフレームワークです。">
+<meta name="keywords" content="vue,codenvy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="フリーで使えるクラウドIDE「Codenvy」を使って Vue.js の開発を始めてみる">
+<meta property="og:url" content="http://asterisks.netlify.com/2018/11/09/codenvy-vue-starter/index.html">
+<meta property="og:site_name" content="asterisks">
+<meta property="og:description" content="こんにちは。shundroid です。高校生活が本格的になってきました。楽しいですが忙しいですね。 さて、今回は、友人とアプリを１つ開発することになりました。そこで、環境構築などを友人の pc で行うのは手間がかかるため、その必要がない、クラウドIDEを用いることにしました。使い方などを記録しておこうと思います。 サービス・ライブラリなど Vue.js : Web アプリ開発のフレームワークです。">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://lh3.googleusercontent.com/fgn2IlNpZzRnc2cxbqLFx5ZVn3ncPLhzZZWXA0FKULyCWJHpz084pmQAlEPRTJlPg3qUy1jFnjhzQ9hpOnPHOmsY0IPrrb-tGKuqwizXsVqb7TUHKuUeOQU9RpxH57NMNUtHZfOGJtPMs4TqjCgOj7mMz7HHa51s997Je-aYcbkWGE3JWLqZR12nZDJnfB-CzrGzOwKwZp2gCOVBKs-5iJYZ9KMu2Eq7AYXdj2nBmRzWh-8YihneVD9rNk73Olo5SsaGMG-wo0cLdjTqjKphTWBAPvuFyg-VSN-CgCNT1GP9M97ehNVh9YIjdbG9tnkD56hNv8LPYR0Rk7vdq_5St0NF5bqBoFx6VP5dfXMt5Fg2Cdi8grFIbB7Au6T_JLUKHC30Aj1agEpLbKGGLa368SeJxSUGiX_tA54F_lPvsWBaOY4k73GZV8MhSgDmQAuy7tDiz81GU4oaY5GaisqrIt7rrrMITIQW1RmXJIEs8sjguf9m2kffA2zqAcv4NdYys7XMBv8YR-WHnppaE3KYlGtcLnZ8z5s8gfICs2msiwIzUDJhBUTm2C06r4qD6zOtlgWkoAI4XMb_YIdAReGj4Gjx__AniU5vCAGde4iROcIIjgaVUrqXHQwZeyco8inC9nW5k148UGV61ELvyLU2A_1_zlPUASAdqZKadxdABLD2ZJjJmzWI2PVKEj01PTtV9xJ6auRI-91Owgb2g7eNR5eL0fMabcXgM4nk=w1304-h814-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/NWGxSw6vjq6KxtNYgsqgt68mpxi9hyL-cq3M5rWtsmRyQqWDEsaumnuqNmAs-07Ctc0F1358IxskVNC6OuCnbqBkbASif3ZZMAmuoWxoHfM0B8-6-xcW9rwUu7VqO45zz7oS5ImAn_LvuaIg1p6WMqDrKAU7HezXdlVN9kUnSjaOQrkGx-4iWIRlpPoVd3C56MSKq6rHtQCaFZglOxdxuKPrl6q_Bui3yELU1-FgvTHXJDL9mAi6YW_a2-2NELVW5trk1fwS30ls4Ih1SqbjVYbbR21KzhPR1ZPZUBUbUYvte8t-KC49gSK_e0C4ejzwiZR0G3iggYTs6MncUAwZppD5reMEQcKZl1O4rjO9jcd7xMQymgX6wqr__fVx7Lh4G70Q9Rswjs6UBWCrjeoidLI1TaOYzFb2xpoertmnRm0u48Hadb8isaQXSIt_lzHFv17DGjVsrlQuaYSDwvcItF2wHrJg4_GuRO4bDbo3n9_8IIF-Fyh0YTfcNLdaYnXhETvjXJhQTJreqyv_mtvvBBdwnd1HpULk3SpwMLWTo5cY-PtPI_pN_LJxprpdSYcuAyPrFkzLNOVbtFZpLhT_-YR_h2oNOjBSaUyA7JXaU16Z31v283DAoe_FkjxfmQC_0pOme_-8uEDNDi5ADUjQSiXOvKSWe4f69FscyAXE4o1rLRm_6zHt07YMBPgqp6RP_5tmjzrikt7oA2BZMUGbnZiiy4q_vV8jJRl4=w955-h484-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/m71ZlwbQKpO7yVfswBNm4UIiu373h2-XNvjZjGFk7EdhFUN4VRrAevCR5zNm_rE9aS8ZylB8PlRJ8aa_7ESHJMg0WhoUg-aSxio4L6KfPOYjE2AT7lPNp9tquu8Kkt1-qGPB7a0jPn6PTHGKPj9DjL1sjdb0uEEJj4j4VRxKlinJxPnCgYRuBDuR6QV1EI_B5m3ZODPBk6TtXgm3Be0oSVEzKUNYP4vHHhdRyE-pZ6rcRnJMUr4gW25udmBACmf1jGrY0h_Sf937w1DzE4GMYSXg2GZ9oSY-j1YzurTlUr8PdXkP9XcPKlbsJWhd_F6HKIoipdyn0eJ61FhDV7nOtgpd1TKXTBC-_42qZCX4lTjk5mvjCi0uRAVonN9TeMSqI9qvOd2L0udkXR2NhK_zW0nFQDUF3SGYDOtGLDcVYyp7WvLr1az_7dI8Dzd_qThPazp2jt8oTyXX_iPzHdt6Y5nSBUgYqVSRKe3GAzzCcGlSurbTS0yCD8soFxRIjRV_Cf_whdF8ltZFDra_ueGU4We--rIJJGeYhhYGU4VQ6FYwxLXO7Dy9ed5GyBOgaVk0yPkOt1oQJJRWBkau5FUTI90EwhgzspEIW5e5FQDjT_w3ayQmBbJBxx7WchEK8psd02dz-jBUO14dsfTPbbLmvNTVnro6JVFI7RkNMg0GumFfILoZinHqys_-P8UJiSiuDDZkwO80P33U_wPgQALW9NOoU7rap9wbollw=w477-h125-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/i7_xvQYr6BRphI4eEChaNCkdYoFnEG-k7RGjBHQ9WH3ZbiTEdhoZbn7VztMpbua0bAPp13HCSespKJUObOivB7f8mXNOPlW2watZ-BUWJl5Doy10bPdAb_VpApRJbuY_pAv9_3cwTj6BJbwAx6Km0v_F1w2gHkld5brLadeFyqsOWoVoM9arSjKF5srP-iE62soaWkIdxY01TC0AUp8rh4a6zqGdwOAKCawshYRtWje9pTIoT4RqLyFGv4uvfEMtDNZA4_RNkpWsmH9EQSR3vuKRYc9hqGzvTLR9Od7M15M3g5Xnv232vKQnw5X3G0qZdq__05_CCUKLu2ip3OzchCdwwGx7sq6GtuFPsbADWnRigexxdAphAV2GGMxO5ehKa7HcpSe5aSQM11YpjlIDQuh_YOKd9JZ5U7MYjDFx2rR7YWQUnzhrYs8YqtvLtpPWlc55I314cMkfGq4H-vwIdhvNM4qLKgSHcMTXeDjQJgrVr6oJnqOx3NHVLz4BxDeiHFi7oPBGODH0Sg0Uy-MmcVXd0I6NCr0rSFS-IQ7MbcOEdkjZ6F7wkI9dmbKT6-PlXOnwQl9mI3o3vU9vyOSYbURWydW8tdgcsO5h610y1ycSOS2AxTC14PgJ6j9d9bvEUNcyaUo3h0ezNjvb3sxpPXQAxUFG3oIAjqnpPrYoXJCXsZWc2ZH8syZjJTfJuOc19IcS-Q5xJpJgHGnQdsmhuIBN5xHnvPh2JFyc=w1079-h207-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/IDGXYtM7u6K19ChPjiLnXPe-aoNqGNXedy6i88yqCLPj9t92a4QpkeNKsbGIWKqknx7NFlX19nG6WYYEKnGi7B5b28S9488_p7oHet9sEFgMKUMpIdGxgGnwgzOa0WRw2nP9wlyYDY0UkvMus3STZ1nOVfGRjZfrqZoQRR8-sjOQvl0f9YuJGtNdcmCDimE3bs4eUuxjc72e5B85ziGjqoazOcaIc_b5l_3Dvz7eiFceEIGosEaroPVkn--RC31yaBnRkAUwkhtLyoUBfgqwH_O19l3vugEWZC0Qw2dLBZDkLzHItYPwEOEFaRw7QWA5MNvjiKGqL8hwJp5lAR25nnzFcOM_L4EhyQM78dBJEASwOMdK6-zNElbhDLboblRoORSj-p4wPdiuku_pfLd9SJOgVYGf8MhuwDUq9tb8LJ-YLNxrHxQkObPtr5ogAT2bqPdxtcCttZR4cyzyFPct2QyIeeAdKPSUhwgJG1ns-d_Lx0SxPerBpqweLHkK50xY_F-Ci_VlZOyVxjKidweR6PBCJj2M57YbIFU7nvssWSO49SxwqpW9r3QKe2Fzih-WMSR-FClK11rZLoLjXx5ZShza3jWl-kM0Dc0PxGKTjCyZXynNHKGG7RKodkIMDIeyFkzEgc75nxNlSSFk-B5cKJke8VuGUNxsTkHRzVfR0cwH2zgRatIpWrXlMKg_MuL0CQlmRvrkNgKjEaUoMHtkfFy10OqKSfwa6vCS=w887-h386-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/qwvXsXdnG4HjbxNkoxDPBCBVd8x7y-Dxz67jU1Tuz4I9h4mj-15QzcEdhvmzMxBQFEwXpLmGZjDN1eEsOKo7CVLpbXoYGwu0lRk2I6YFYbN0UrUNr3Xgo6zvlWsfzUmmemiTxDFjhpvQGq7jdH2EC-h6vQlyIrAU_L1i2NZ98uPNIzzBchH2a1fZXvYIwye08CWq30BRtqYkVbqLS57E8fgKL5LksAHDDsxtgIkDbB5NJ8PiNvsK7kM7KmihUxAm5Od6JPFES3ZeJ-68R6AcSsNuAJ00ulwP-ZvpMEnMzKT09kuKa4ktL9Q9hXbAjdyeLX0lGNPuthCn2UpCsx3u3Q9xxnB7nq_eyUtfiQNN7wUUvGwgNh8CpDomi2EL_2fpomiDlc-JOOPDzZO7-kFumNAUDwiBuwvuRFhAv9WLDhu_eNrKAozoLt9eumzHiz-LiLMoAf0V3DkEq9vlnEBTtIqTqXNVi5bag7Ggz66HSQQaBy63olBdLo9PAzWJ6KdrBq2dZqGcQ7skZvt4XR3BcrbJSCVObATM2yV61b3X0uIaC0qRBThxOICsJDAKF7vNETRDu0laDeboQqv2fyDsjeWnH37y63ear5elREO67YUWXDN59TuAFb__vKQbslqF-yld-Noie0IiGuUlFvCGINgR5M1nUn8rn-JPib7vuLV4mJnbD1wRgFOIzCVlLajOxfuMyFvNsS07mQoEn7GZuI741AR-NQQcredq=w561-h713-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/iWE_qQl-G7F5yqujX08qyXPKSWHCW0pm3kSn8CtXgvkMlNT-9xUhHYgK978tRmpLPwBXh6sZcoT66NCU1nuUcNLh5SHMzui7tUROAQxAJnJEOffFnNOjAEDibv47LAMBm-woC88RExopg4-9qbR2fCNt-xQArBBEoRMN-MLob5rA1qqUnOE9lhYu_43k7-ty6NqeFuTgDz0oDyRhPuo_7sH5ccM8VnC333HEcajE9SAaZFTA-zLApw5k3bdFSvHci9GDSOYJuFOzpOv91Xe_-85A2aWYLXTCQW32ZvuXTd7ACHmmVOCFayoZGcfiWzQbahEXT0OCikZ9OSXjjU6LuLHecgBUAF0Y3_F2P0TPD_YXpfbgVYvfO6boV672CNES5MY01BE-qBAuO9f13GYNH2jUZWviNMZ5rx1Q2V330Y5u9968zC-WvMSG8akNI-AsWrwjTgZdtbLhkondhsMm3p-zLLPkYZV8Bij97lb-CjwKqjNMLWE5tQosE7OuFoIZr06GGXu4cpfxOjvrwfLKCNwZnDRkf4EwEWgvytD6aOBZOpal0u2bvXXv_mHVQmcEB_Nlj0-cimLHWtROdXQ_lPVw9JevPqNuwZIuikjlwk3J2JL6u1IN4Y67qLrhday2UxQU90Bipp1LUBbsSls_M6Ht5BLmxfG_GxVSmRLl_2gOiQER4LGdpZgUA3kVJXcEp3zb6S0kgYcUyEiN8dNQ7KMuyb9fMtVl_npB=w895-h202-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/Co_2szRNmm1XNSqYEuQ4ea9BVBbS4y89Ghkn7KZ48hAXROlzpox9Id66sXWASijTTYjFfj-jogw7xDiU55ium-9UYQKObg4wma3elzExZgD3h1CGMHLsLd7XzKocvzT7IuMKhF1jbQQPqFPYNb3C-XQE7jJoJCE7mLFAK_lSRLCNj4a-qI60gDjQ2jU4VEpqrosU5hsTnoD8lJc-z9B45eAN9NsVT0uyGcCSBuzbb8ktGb67w5KcELo1KLLZszWHsDKIx1Xt2SQJ-XdCwhC8Y9_oC4UaBsddR4V_bLse2EWipX_Oo165L_e4I0aYbvK7wRFxRPImmtk78qlNxTsiosEahukBY0oSJs3LzCV6vgwGNy60tfmlB27uN-_HZ-jfzokb0v_AsE8PerSpT6cYqYpl4NGkBZz5ghzKptHqy4WhJsma8mt8qtjwST9_J6ycUGPQNqN8g0iHUcvB-_1mNBOGHPMm8zcImVbiNC5jKx9Jxu_ir50ls4ezkmif17wVrj-WBOdXJSaCR-cVOzBcGLuIaInnnR-arTybA0NtWby9NiAPnx0RrcyFBn_yjS70nfETGJqpxqS46GOL7HoZdTD06qzZdcB9zS_b4FcNof6bkMMgGPkCqN_HbEga5ITq0nLN6ABgz8wMYLrCNdLWnCIBzzhrDbmOMN-7mioIr1rrcklAj6y0KInN3zmrG0c9FvLK37oGrev6hY0CqTxDOvpnbFacIaJVnHf7=w595-h290-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/cwEfndrkCCfKIE4UWJ851A3acX2oDelqIxsJv77w1IJyHUTCwW95V_8SOXLlTgCeVMoUuutEy0LDDOrmW_RAiATEGGrND3A-dNz-dCCK8_idPXf2z_T8saZh9I-4LfDm67d-XnZD3stv3k9L8bDeQ0E1GsCLCL9WdMjNgs4gSyPMaGTuMlVxdpmWCBuwKqOP1GtwOdCIDHmd4kdF9qCp9V6d5fiePWZJGYsPuNZkMhtgELf10HFOnXOIJgRjp_QyxWY1Lz96S2KYlSB9ALGBayCqtl28w_jWpXxuYY9ZwHqHC8gI_uo7hvlTJeQwDUz5h3sRY_BDMw2HmDigXGqe7A0xiIPLoC9NorBkDmX00YeuHVXE0nCLdJgGel9qedS7RivtdF3gB72Ln7klwM1ZCunyIK9zmgG1Ru-Agl0jTXGdPzJgzJ4pV5XuM29Q1eBw1AFOoxnJbFMzbZYbiulIj35DyLcjwswN6Uvw-MX2RkCX2tZAy8pD5Jo9S_pe3TrtVGLEG6VXfmP0epSYmEEqnJl_ofDC5w7w2Y_2EMBulWkFGKip7BJfaltDkhWcaX7dMHMT5MsNv2hxQiGb9Z1j-Kz6K2_o8hEOjrSalhyj9bot1LBDBVwdB4fsTkJ1k0HUQhQ_dA71iwiZ7zPysQOTTv1AQVCPZR9Mmjdj1F3D6IGtKBTCzI99ZwEfjztD0qXaudEKBTmYU08GaTXQwGJj7KkNN9NUa7p2b02w=w995-h607-no">
+<meta property="og:updated_time" content="2020-03-17T02:25:18.650Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="フリーで使えるクラウドIDE「Codenvy」を使って Vue.js の開発を始めてみる">
+<meta name="twitter:description" content="こんにちは。shundroid です。高校生活が本格的になってきました。楽しいですが忙しいですね。 さて、今回は、友人とアプリを１つ開発することになりました。そこで、環境構築などを友人の pc で行うのは手間がかかるため、その必要がない、クラウドIDEを用いることにしました。使い方などを記録しておこうと思います。 サービス・ライブラリなど Vue.js : Web アプリ開発のフレームワークです。">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/fgn2IlNpZzRnc2cxbqLFx5ZVn3ncPLhzZZWXA0FKULyCWJHpz084pmQAlEPRTJlPg3qUy1jFnjhzQ9hpOnPHOmsY0IPrrb-tGKuqwizXsVqb7TUHKuUeOQU9RpxH57NMNUtHZfOGJtPMs4TqjCgOj7mMz7HHa51s997Je-aYcbkWGE3JWLqZR12nZDJnfB-CzrGzOwKwZp2gCOVBKs-5iJYZ9KMu2Eq7AYXdj2nBmRzWh-8YihneVD9rNk73Olo5SsaGMG-wo0cLdjTqjKphTWBAPvuFyg-VSN-CgCNT1GP9M97ehNVh9YIjdbG9tnkD56hNv8LPYR0Rk7vdq_5St0NF5bqBoFx6VP5dfXMt5Fg2Cdi8grFIbB7Au6T_JLUKHC30Aj1agEpLbKGGLa368SeJxSUGiX_tA54F_lPvsWBaOY4k73GZV8MhSgDmQAuy7tDiz81GU4oaY5GaisqrIt7rrrMITIQW1RmXJIEs8sjguf9m2kffA2zqAcv4NdYys7XMBv8YR-WHnppaE3KYlGtcLnZ8z5s8gfICs2msiwIzUDJhBUTm2C06r4qD6zOtlgWkoAI4XMb_YIdAReGj4Gjx__AniU5vCAGde4iROcIIjgaVUrqXHQwZeyco8inC9nW5k148UGV61ELvyLU2A_1_zlPUASAdqZKadxdABLD2ZJjJmzWI2PVKEj01PTtV9xJ6auRI-91Owgb2g7eNR5eL0fMabcXgM4nk=w1304-h814-no">
+
+
+  <link rel="alternative" href="/atom.xml" title="asterisks" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.ico">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55214112-4', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+
+<meta name="google-site-verification" content="1ThXLD31B1KlIfXQTLS-gbYe8WB5boRoUGdxuWOA04U">
+
+</head>
+<body class="monochrome">
+
+  <!-- Twitter Share Button -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook Share Button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">*.*</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/"><!--asterisks-->*.*</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">by shundroid</div>
+        
+      </div>
+      <!-- 
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+       -->
+    </div>
+  </div>
+  <div class="body">
+    <div class="search-area">
+      <input type="text" id="search-box" placeholder="Search By RegExp \*.*/">
+      <button id="search-submit">GO</button><br>
+      <div id="search-result">
+        What's RegExp?
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" style="color: #cfe3cb" target="_blank">Here</a>
+      </div>
+      <script type="text/javascript" async>
+      (function() {
+        const searchBox = document.getElementById("search-box")
+        searchBox.addEventListener("keydown", e => {
+          if (e.key.toLowerCase() === "enter") {
+            search(searchBox.value)
+          }
+        });
+        document.getElementById("search-submit").addEventListener("click", () => {
+          search(searchBox.value)
+        });
+        function search(text) {
+          window.location.href = "/search/?search=" + text;
+        }
+      })();
+      </script>
+    </div>
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog-Management/">Blog Management</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collections/">Collections</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIDI/">MIDI</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Made-by-me/">Made by me</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SERIES/">SERIES</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity/">Unity</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Virtual-Environment/">Virtual Environment</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Programming/">Web Programming</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">diary</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ace/">ace</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/">async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azure/">azure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/besiege/">besiege</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitbucket/">bitbucket</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bower/">bower</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/browserify/">browserify</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cities-sky-lines/">cities-sky-lines</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmd/">cmd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codenvy/">codenvy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conemu/">conemu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs6/">cs6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csharp/">csharp</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cygwin/">cygwin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/">diary</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll/">dll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domino/">domino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emscripten/">emscripten</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from-codeiq/">from-codeiq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gist/">gist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gpu/">gpu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hacknet/">hacknet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/halstar/">halstar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/highlight/">highlight</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hueman/">hueman</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iis/">iis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-nodejs-line/">javascript, nodejs, line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/">less</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/litjson/">litjson</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matter-js/">matter-js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/microsoft/">microsoft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/midi/">midi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mime/">mime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movejs/">movejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mozilla/">mozilla</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netbeans/">netbeans</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/niconico/">niconico</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opus-magnum/">opus-magnum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oxygen-not-included/">oxygen-not-included</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poly-bridge/">poly-bridge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/">privacy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/putty/">putty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raycast/">raycast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/">reflection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regedit/">regedit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rx-js/">rx.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sekaowa/">sekaowa</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shenzhen-io/">shenzhen-io</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spacechem/">spacechem</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sphero/">sphero</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprite/">sprite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/steam/">steam</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tis-100/">tis-100</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ugui/">ugui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity2d/">unity2d</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualbox/">virtualbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visualstudio/">visualstudio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode-ext/">vscode-ext</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wercker/">wercker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows10/">windows10</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/youtube/">youtube</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/そういえば/">そういえば</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">69</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/">2014</a><span class="archive-list-count">2</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/profile" title="Profile">Profile</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="About This Site">About This Site</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/shundroid" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://www.youtube.com/channel/UC7SEX9GABXlBaCb9vZVPIfg" title="Youtube" target="_blank" rel="noopener">Youtube</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+    <a class="twitter-timeline" data-height="300" data-theme="dark" href="https://twitter.com/shundroid_pub?ref_src=twsrc%5Etfw">Tweets by shundroid_pub</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-codenvy-vue-starter" class="article article-type-post">
+  
+    <h1 class="article-header">
+      フリーで使えるクラウドIDE「Codenvy」を使って Vue.js の開発を始めてみる
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2018-11-09
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codenvy/">codenvy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+	</span>
+
+
+  </div>
+  <div id="toc" class="toc-article">
+    <p class="toc-title">TOC</p>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#サービス・ライブラリなど"><span class="toc-text">サービス・ライブラリなど</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codenvy-と他サービスの比較"><span class="toc-text">Codenvy と他サービスの比較</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codenvy-を始めてみる"><span class="toc-text">Codenvy を始めてみる</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Team-の作成"><span class="toc-text">Team の作成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Workspace-の作成"><span class="toc-text">Workspace の作成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Workspace-を-Share-する"><span class="toc-text">Workspace を Share する</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Port-の開放"><span class="toc-text">Port の開放</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack-の設定の変更"><span class="toc-text">Webpack の設定の変更</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ホストを変更する"><span class="toc-text">ホストを変更する</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#disableHostCheck-を-true-にする"><span class="toc-text">disableHostCheck を true にする</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ポートを変更する"><span class="toc-text">ポートを変更する</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#実行"><span class="toc-text">実行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL-の確認"><span class="toc-text">URL の確認</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#できているはず"><span class="toc-text">できているはず</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#まとめ"><span class="toc-text">まとめ</span></a></li></ol>
+  </div>
+  <div class="article-entry">
+    <p>こんにちは。shundroid です。<br>高校生活が本格的になってきました。楽しいですが忙しいですね。</p>
+<p>さて、今回は、友人とアプリを１つ開発することになりました。<br>そこで、環境構築などを友人の pc で行うのは手間がかかるため、<br>その必要がない、クラウドIDEを用いることにしました。<br>使い方などを記録しておこうと思います。</p>
+<h2 id="サービス・ライブラリなど"><a href="#サービス・ライブラリなど" class="headerlink" title="サービス・ライブラリなど"></a>サービス・ライブラリなど</h2><ul>
+<li><a href="https://jp.vuejs.org/index.html" target="_blank" rel="noopener">Vue.js</a> : Web アプリ開発のフレームワークです。最近ホットになってきてうれしいです。</li>
+<li>クラウドIDE : クラウド上で動くIDEです。環境構築の手間がいらないので、スマホで動作するものもあります（codeanywhereなど）</li>
+<li><a href="https://www.eclipse.org/che/" target="_blank" rel="noopener">Eclipse Che</a> : クラウドIDE の一種です。あの Eclipse の「Next-Generation IDE」だと公式サイトには書いてありますね。</li>
+<li><a href="https://codenvy.com/" target="_blank" rel="noopener">Codenvy</a> Eclipse Che をホストしているサービスです。</li>
+</ul>
+<h2 id="Codenvy-と他サービスの比較"><a href="#Codenvy-と他サービスの比較" class="headerlink" title="Codenvy と他サービスの比較"></a>Codenvy と他サービスの比較</h2><p>同等のクラウドIDE サービスとして、AWS Cloud 9 と codeanywhere が有名です。<br>それぞれのサービスの特徴をあげておいます。</p>
+<ul>
+<li>AWS Cloud 9 は一番有名なクラウドIDEなのではないでしょうか。Amazon が買収して<strong>無料で使えなくなりました。</strong></li>
+<li>codeanywhere は「anywhere」というだけあって Android などスマホ版のアプリがあります。しかし無料では１日2時間までしか使えないという制約があります。</li>
+</ul>
+<p>Codenvy は無料でわりと高機能に使えて、さらに友人と開発するのに必要な「チーム開発」機能があったので選びました。ただしバグが少しありますね…。</p>
+<h2 id="Codenvy-を始めてみる"><a href="#Codenvy-を始めてみる" class="headerlink" title="Codenvy を始めてみる"></a>Codenvy を始めてみる</h2><p><a href="https://codenvy.io/site/login" target="_blank" rel="noopener">https://codenvy.io/site/login</a></p>
+<p>ここにアクセスして、アカウントを取得します。</p>
+<p><img src="https://lh3.googleusercontent.com/fgn2IlNpZzRnc2cxbqLFx5ZVn3ncPLhzZZWXA0FKULyCWJHpz084pmQAlEPRTJlPg3qUy1jFnjhzQ9hpOnPHOmsY0IPrrb-tGKuqwizXsVqb7TUHKuUeOQU9RpxH57NMNUtHZfOGJtPMs4TqjCgOj7mMz7HHa51s997Je-aYcbkWGE3JWLqZR12nZDJnfB-CzrGzOwKwZp2gCOVBKs-5iJYZ9KMu2Eq7AYXdj2nBmRzWh-8YihneVD9rNk73Olo5SsaGMG-wo0cLdjTqjKphTWBAPvuFyg-VSN-CgCNT1GP9M97ehNVh9YIjdbG9tnkD56hNv8LPYR0Rk7vdq_5St0NF5bqBoFx6VP5dfXMt5Fg2Cdi8grFIbB7Au6T_JLUKHC30Aj1agEpLbKGGLa368SeJxSUGiX_tA54F_lPvsWBaOY4k73GZV8MhSgDmQAuy7tDiz81GU4oaY5GaisqrIt7rrrMITIQW1RmXJIEs8sjguf9m2kffA2zqAcv4NdYys7XMBv8YR-WHnppaE3KYlGtcLnZ8z5s8gfICs2msiwIzUDJhBUTm2C06r4qD6zOtlgWkoAI4XMb_YIdAReGj4Gjx__AniU5vCAGde4iROcIIjgaVUrqXHQwZeyco8inC9nW5k148UGV61ELvyLU2A_1_zlPUASAdqZKadxdABLD2ZJjJmzWI2PVKEj01PTtV9xJ6auRI-91Owgb2g7eNR5eL0fMabcXgM4nk=w1304-h814-no" alt></p>
+<p>そうするとこのような Dashboard が開きます。</p>
+<h2 id="Team-の作成"><a href="#Team-の作成" class="headerlink" title="Team の作成"></a>Team の作成</h2><p>今回は友人との開発なので、まず Team を作ります。<br>一人でしか使わない方はこの節は飛ばしてください。</p>
+<p>左側の「Create Team」をクリックして、</p>
+<p><a href="https://codenvy.io/dashboard/#/team/create" target="_blank" rel="noopener">https://codenvy.io/dashboard/#/team/create</a></p>
+<p>に移動します。</p>
+<p><img src="https://lh3.googleusercontent.com/NWGxSw6vjq6KxtNYgsqgt68mpxi9hyL-cq3M5rWtsmRyQqWDEsaumnuqNmAs-07Ctc0F1358IxskVNC6OuCnbqBkbASif3ZZMAmuoWxoHfM0B8-6-xcW9rwUu7VqO45zz7oS5ImAn_LvuaIg1p6WMqDrKAU7HezXdlVN9kUnSjaOQrkGx-4iWIRlpPoVd3C56MSKq6rHtQCaFZglOxdxuKPrl6q_Bui3yELU1-FgvTHXJDL9mAi6YW_a2-2NELVW5trk1fwS30ls4Ih1SqbjVYbbR21KzhPR1ZPZUBUbUYvte8t-KC49gSK_e0C4ejzwiZR0G3iggYTs6MncUAwZppD5reMEQcKZl1O4rjO9jcd7xMQymgX6wqr__fVx7Lh4G70Q9Rswjs6UBWCrjeoidLI1TaOYzFb2xpoertmnRm0u48Hadb8isaQXSIt_lzHFv17DGjVsrlQuaYSDwvcItF2wHrJg4_GuRO4bDbo3n9_8IIF-Fyh0YTfcNLdaYnXhETvjXJhQTJreqyv_mtvvBBdwnd1HpULk3SpwMLWTo5cY-PtPI_pN_LJxprpdSYcuAyPrFkzLNOVbtFZpLhT_-YR_h2oNOjBSaUyA7JXaU16Z31v283DAoe_FkjxfmQC_0pOme_-8uEDNDi5ADUjQSiXOvKSWe4f69FscyAXE4o1rLRm_6zHt07YMBPgqp6RP_5tmjzrikt7oA2BZMUGbnZiiy4q_vV8jJRl4=w955-h484-no" alt></p>
+<p>チーム名を入力したら終わりです。簡単。<br>メンバーは後から追加可能です。</p>
+<h2 id="Workspace-の作成"><a href="#Workspace-の作成" class="headerlink" title="Workspace の作成"></a>Workspace の作成</h2><p>左側の「Create Workspace」をクリックして、</p>
+<p><a href="https://codenvy.io/dashboard/#/create-workspace" target="_blank" rel="noopener">https://codenvy.io/dashboard/#/create-workspace</a></p>
+<p>に移動します。<br>後はウィザード通りに進めればよいのですが、<br><strong>チーム開発をするときにとても気を付けなければならないところがあります。</strong></p>
+<p><img src="https://lh3.googleusercontent.com/m71ZlwbQKpO7yVfswBNm4UIiu373h2-XNvjZjGFk7EdhFUN4VRrAevCR5zNm_rE9aS8ZylB8PlRJ8aa_7ESHJMg0WhoUg-aSxio4L6KfPOYjE2AT7lPNp9tquu8Kkt1-qGPB7a0jPn6PTHGKPj9DjL1sjdb0uEEJj4j4VRxKlinJxPnCgYRuBDuR6QV1EI_B5m3ZODPBk6TtXgm3Be0oSVEzKUNYP4vHHhdRyE-pZ6rcRnJMUr4gW25udmBACmf1jGrY0h_Sf937w1DzE4GMYSXg2GZ9oSY-j1YzurTlUr8PdXkP9XcPKlbsJWhd_F6HKIoipdyn0eJ61FhDV7nOtgpd1TKXTBC-_42qZCX4lTjk5mvjCi0uRAVonN9TeMSqI9qvOd2L0udkXR2NhK_zW0nFQDUF3SGYDOtGLDcVYyp7WvLr1az_7dI8Dzd_qThPazp2jt8oTyXX_iPzHdt6Y5nSBUgYqVSRKe3GAzzCcGlSurbTS0yCD8soFxRIjRV_Cf_whdF8ltZFDra_ueGU4We--rIJJGeYhhYGU4VQ6FYwxLXO7Dy9ed5GyBOgaVk0yPkOt1oQJJRWBkau5FUTI90EwhgzspEIW5e5FQDjT_w3ayQmBbJBxx7WchEK8psd02dz-jBUO14dsfTPbbLmvNTVnro6JVFI7RkNMg0GumFfILoZinHqys_-P8UJiSiuDDZkwO80P33U_wPgQALW9NOoU7rap9wbollw=w477-h125-no" alt></p>
+<p>ここでWorkspaceを紐づけるTeamを決めることですね。なぜかこれは後から変える方法が見つからなかったので、ここでミスるとWorkspaceを作り直す必要があります。</p>
+<p>Stack は Vue.js なので <strong>Node</strong> を選択してくださいね。</p>
+<p><img src="https://lh3.googleusercontent.com/i7_xvQYr6BRphI4eEChaNCkdYoFnEG-k7RGjBHQ9WH3ZbiTEdhoZbn7VztMpbua0bAPp13HCSespKJUObOivB7f8mXNOPlW2watZ-BUWJl5Doy10bPdAb_VpApRJbuY_pAv9_3cwTj6BJbwAx6Km0v_F1w2gHkld5brLadeFyqsOWoVoM9arSjKF5srP-iE62soaWkIdxY01TC0AUp8rh4a6zqGdwOAKCawshYRtWje9pTIoT4RqLyFGv4uvfEMtDNZA4_RNkpWsmH9EQSR3vuKRYc9hqGzvTLR9Od7M15M3g5Xnv232vKQnw5X3G0qZdq__05_CCUKLu2ip3OzchCdwwGx7sq6GtuFPsbADWnRigexxdAphAV2GGMxO5ehKa7HcpSe5aSQM11YpjlIDQuh_YOKd9JZ5U7MYjDFx2rR7YWQUnzhrYs8YqtvLtpPWlc55I314cMkfGq4H-vwIdhvNM4qLKgSHcMTXeDjQJgrVr6oJnqOx3NHVLz4BxDeiHFi7oPBGODH0Sg0Uy-MmcVXd0I6NCr0rSFS-IQ7MbcOEdkjZ6F7wkI9dmbKT6-PlXOnwQl9mI3o3vU9vyOSYbURWydW8tdgcsO5h610y1ycSOS2AxTC14PgJ6j9d9bvEUNcyaUo3h0ezNjvb3sxpPXQAxUFG3oIAjqnpPrYoXJCXsZWc2ZH8syZjJTfJuOc19IcS-Q5xJpJgHGnQdsmhuIBN5xHnvPh2JFyc=w1079-h207-no" alt></p>
+<p>なお、この Projects のところからは Github のリポジトリをインポートしたり、<br>Git を選択すると非公開の Bitbucket のリポジトリをインポートしたりすることもできます。</p>
+<p>Project は後から Workspace に追加したり、作成したりすることも可能です。</p>
+<h2 id="Workspace-を-Share-する"><a href="#Workspace-を-Share-する" class="headerlink" title="Workspace を Share する"></a>Workspace を Share する</h2><p>チームで Workspace を使う際、なんと Workspace を Team に紐づけるほかに、<br>Share という設定を変える必要があります。</p>
+<p>左上の Workspaces をクリックして、</p>
+<p><a href="https://codenvy.io/dashboard/#/workspaces" target="_blank" rel="noopener">https://codenvy.io/dashboard/#/workspaces</a></p>
+<p>に移動します。</p>
+<p>Workspace を選択して、設定に移ります。</p>
+<p><img src="https://lh3.googleusercontent.com/IDGXYtM7u6K19ChPjiLnXPe-aoNqGNXedy6i88yqCLPj9t92a4QpkeNKsbGIWKqknx7NFlX19nG6WYYEKnGi7B5b28S9488_p7oHet9sEFgMKUMpIdGxgGnwgzOa0WRw2nP9wlyYDY0UkvMus3STZ1nOVfGRjZfrqZoQRR8-sjOQvl0f9YuJGtNdcmCDimE3bs4eUuxjc72e5B85ziGjqoazOcaIc_b5l_3Dvz7eiFceEIGosEaroPVkn--RC31yaBnRkAUwkhtLyoUBfgqwH_O19l3vugEWZC0Qw2dLBZDkLzHItYPwEOEFaRw7QWA5MNvjiKGqL8hwJp5lAR25nnzFcOM_L4EhyQM78dBJEASwOMdK6-zNElbhDLboblRoORSj-p4wPdiuku_pfLd9SJOgVYGf8MhuwDUq9tb8LJ-YLNxrHxQkObPtr5ogAT2bqPdxtcCttZR4cyzyFPct2QyIeeAdKPSUhwgJG1ns-d_Lx0SxPerBpqweLHkK50xY_F-Ci_VlZOyVxjKidweR6PBCJj2M57YbIFU7nvssWSO49SxwqpW9r3QKe2Fzih-WMSR-FClK11rZLoLjXx5ZShza3jWl-kM0Dc0PxGKTjCyZXynNHKGG7RKodkIMDIeyFkzEgc75nxNlSSFk-B5cKJke8VuGUNxsTkHRzVfR0cwH2zgRatIpWrXlMKg_MuL0CQlmRvrkNgKjEaUoMHtkfFy10OqKSfwa6vCS=w887-h386-no" alt></p>
+<p>Share → Add Developer を選択して、Workspace を使う User を追加してください。</p>
+<p>ここにつまづいて１時間くらいとられました…</p>
+<h2 id="Port-の開放"><a href="#Port-の開放" class="headerlink" title="Port の開放"></a>Port の開放</h2><p>Codenvy ではどうやらポートごとにサーバーが割り当てられるそうです。<br>例えば、9000 番ポートにアクセスするため、3000 番ポートにアクセスするため、・・・という風にそれぞれサーバーが設定されています。</p>
+<p><img src="https://lh3.googleusercontent.com/qwvXsXdnG4HjbxNkoxDPBCBVd8x7y-Dxz67jU1Tuz4I9h4mj-15QzcEdhvmzMxBQFEwXpLmGZjDN1eEsOKo7CVLpbXoYGwu0lRk2I6YFYbN0UrUNr3Xgo6zvlWsfzUmmemiTxDFjhpvQGq7jdH2EC-h6vQlyIrAU_L1i2NZ98uPNIzzBchH2a1fZXvYIwye08CWq30BRtqYkVbqLS57E8fgKL5LksAHDDsxtgIkDbB5NJ8PiNvsK7kM7KmihUxAm5Od6JPFES3ZeJ-68R6AcSsNuAJ00ulwP-ZvpMEnMzKT09kuKa4ktL9Q9hXbAjdyeLX0lGNPuthCn2UpCsx3u3Q9xxnB7nq_eyUtfiQNN7wUUvGwgNh8CpDomi2EL_2fpomiDlc-JOOPDzZO7-kFumNAUDwiBuwvuRFhAv9WLDhu_eNrKAozoLt9eumzHiz-LiLMoAf0V3DkEq9vlnEBTtIqTqXNVi5bag7Ggz66HSQQaBy63olBdLo9PAzWJ6KdrBq2dZqGcQ7skZvt4XR3BcrbJSCVObATM2yV61b3X0uIaC0qRBThxOICsJDAKF7vNETRDu0laDeboQqv2fyDsjeWnH37y63ear5elREO67YUWXDN59TuAFb__vKQbslqF-yld-Noie0IiGuUlFvCGINgR5M1nUn8rn-JPib7vuLV4mJnbD1wRgFOIzCVlLajOxfuMyFvNsS07mQoEn7GZuI741AR-NQQcredq=w561-h713-no" alt></p>
+<p>デフォルトでは 9000 番や 3000 番が開けられています。他のポートを利用したい場合は、追加する必要があります。</p>
+<p><img src="https://lh3.googleusercontent.com/iWE_qQl-G7F5yqujX08qyXPKSWHCW0pm3kSn8CtXgvkMlNT-9xUhHYgK978tRmpLPwBXh6sZcoT66NCU1nuUcNLh5SHMzui7tUROAQxAJnJEOffFnNOjAEDibv47LAMBm-woC88RExopg4-9qbR2fCNt-xQArBBEoRMN-MLob5rA1qqUnOE9lhYu_43k7-ty6NqeFuTgDz0oDyRhPuo_7sH5ccM8VnC333HEcajE9SAaZFTA-zLApw5k3bdFSvHci9GDSOYJuFOzpOv91Xe_-85A2aWYLXTCQW32ZvuXTd7ACHmmVOCFayoZGcfiWzQbahEXT0OCikZ9OSXjjU6LuLHecgBUAF0Y3_F2P0TPD_YXpfbgVYvfO6boV672CNES5MY01BE-qBAuO9f13GYNH2jUZWviNMZ5rx1Q2V330Y5u9968zC-WvMSG8akNI-AsWrwjTgZdtbLhkondhsMm3p-zLLPkYZV8Bij97lb-CjwKqjNMLWE5tQosE7OuFoIZr06GGXu4cpfxOjvrwfLKCNwZnDRkf4EwEWgvytD6aOBZOpal0u2bvXXv_mHVQmcEB_Nlj0-cimLHWtROdXQ_lPVw9JevPqNuwZIuikjlwk3J2JL6u1IN4Y67qLrhday2UxQU90Bipp1LUBbsSls_M6Ht5BLmxfG_GxVSmRLl_2gOiQER4LGdpZgUA3kVJXcEp3zb6S0kgYcUyEiN8dNQ7KMuyb9fMtVl_npB=w895-h202-no" alt></p>
+<p>Workspace を Share するときの設定画面に移動して、「Server」→「Add Server」から追加します。</p>
+<p><img src="https://lh3.googleusercontent.com/Co_2szRNmm1XNSqYEuQ4ea9BVBbS4y89Ghkn7KZ48hAXROlzpox9Id66sXWASijTTYjFfj-jogw7xDiU55ium-9UYQKObg4wma3elzExZgD3h1CGMHLsLd7XzKocvzT7IuMKhF1jbQQPqFPYNb3C-XQE7jJoJCE7mLFAK_lSRLCNj4a-qI60gDjQ2jU4VEpqrosU5hsTnoD8lJc-z9B45eAN9NsVT0uyGcCSBuzbb8ktGb67w5KcELo1KLLZszWHsDKIx1Xt2SQJ-XdCwhC8Y9_oC4UaBsddR4V_bLse2EWipX_Oo165L_e4I0aYbvK7wRFxRPImmtk78qlNxTsiosEahukBY0oSJs3LzCV6vgwGNy60tfmlB27uN-_HZ-jfzokb0v_AsE8PerSpT6cYqYpl4NGkBZz5ghzKptHqy4WhJsma8mt8qtjwST9_J6ycUGPQNqN8g0iHUcvB-_1mNBOGHPMm8zcImVbiNC5jKx9Jxu_ir50ls4ezkmif17wVrj-WBOdXJSaCR-cVOzBcGLuIaInnnR-arTybA0NtWby9NiAPnx0RrcyFBn_yjS70nfETGJqpxqS46GOL7HoZdTD06qzZdcB9zS_b4FcNof6bkMMgGPkCqN_HbEga5ITq0nLN6ABgz8wMYLrCNdLWnCIBzzhrDbmOMN-7mioIr1rrcklAj6y0KInN3zmrG0c9FvLK37oGrev6hY0CqTxDOvpnbFacIaJVnHf7=w595-h290-no" alt></p>
+<p>Reference は何でもいいんですけど例えば「node-8080」、portに開放したいポート番号を入力します。（8080など）</p>
+<h2 id="Webpack-の設定の変更"><a href="#Webpack-の設定の変更" class="headerlink" title="Webpack の設定の変更"></a>Webpack の設定の変更</h2><p>※ここは vue-cli v3 を利用して生成されたプロジェクトについての話です。そうでない場合は適宜なんか補ってください。</p>
+<p>僕は Bitbucket から Project を import しているので、それがそのまま codenvy で使えているのですが、codenvy 上で vue-cli を利用してプロジェクトを作る場合は、ターミナルを開き、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm i vue-cli</span><br><span class="line">$ ./node_modules/.bin/vue init webpack &lt;プロジェクト名&gt;</span><br></pre></td></tr></table></figure>
+<p>を実行してください。<br>ターミナルは下のほう、もしくは Run → Terminal から開けます。</p>
+<p>Codenvy で Webpack を利用して、App を実行するために必要となる変更は次の通りです。</p>
+<ul>
+<li><code>host</code> の変更</li>
+<li><code>disableHostCheck</code> を <code>true</code> にする</li>
+<li>(<code>port</code> の変更)</li>
+</ul>
+<h3 id="ホストを変更する"><a href="#ホストを変更する" class="headerlink" title="ホストを変更する"></a>ホストを変更する</h3><p>デフォルトでは <code>localhost</code> や <code>127.0.0.1</code> になっているかもしれませんが、外部からのアクセスを可能にするため、 <code>0.0.0.0</code> にします。</p>
+<p>&lt;プロジェクト名&gt;/config/index.js を、次のように変更します。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  dev: &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    host: <span class="string">'0.0.0.0'</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="disableHostCheck-を-true-にする"><a href="#disableHostCheck-を-true-にする" class="headerlink" title="disableHostCheck を true にする"></a>disableHostCheck を true にする</h3><p>ここはハマりました。このままでもアクセスは可能なのですが、<br>「Invalid Host Header」というレスポンスがされてしまいました。</p>
+<p>&lt;プロジェクト名&gt;/build/webpack.dev.conf.js を、次のように変更します。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">const</span> devWebpackConfig = merge(baseWebpackConfig, &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  devServer: &#123;</span><br><span class="line">    disableHostCheck: <span class="literal">true</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>あまりジェネレートされたファイルは変更したくないのですが、仕方がないですね。</p>
+<h3 id="ポートを変更する"><a href="#ポートを変更する" class="headerlink" title="ポートを変更する"></a>ポートを変更する</h3><p>先ほど Port の開放で、「8080」ポートを開放しているなら大丈夫なのですが、<br>9000 や 3000 ポートを利用したい場合はこの作業が必要です。</p>
+<p>&lt;プロジェクト名&gt;/config/index.js を、次のように変更します。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  dev: &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    port: <span class="number">9000</span> <span class="comment">// or 3000, 8080, ...</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="実行"><a href="#実行" class="headerlink" title="実行"></a>実行</h2><p>下のターミナル（出ていない場合は Run → Terminal）で、次のように実行します。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /projects/&lt;プロジェクト名&gt;</span><br><span class="line">$ npm i</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<p>こうすると、0.0.0.0 でアプリが実行されます。</p>
+<h2 id="URL-の確認"><a href="#URL-の確認" class="headerlink" title="URL の確認"></a>URL の確認</h2><p>この 0.0.0.0 にアクセスする方法ですが、先ほどの設定画面、「Server」より、それぞれのポートに対応する Server の Url が貼られていて、確認することができます。</p>
+<h2 id="できているはず"><a href="#できているはず" class="headerlink" title="できているはず"></a>できているはず</h2><p><img src="https://lh3.googleusercontent.com/cwEfndrkCCfKIE4UWJ851A3acX2oDelqIxsJv77w1IJyHUTCwW95V_8SOXLlTgCeVMoUuutEy0LDDOrmW_RAiATEGGrND3A-dNz-dCCK8_idPXf2z_T8saZh9I-4LfDm67d-XnZD3stv3k9L8bDeQ0E1GsCLCL9WdMjNgs4gSyPMaGTuMlVxdpmWCBuwKqOP1GtwOdCIDHmd4kdF9qCp9V6d5fiePWZJGYsPuNZkMhtgELf10HFOnXOIJgRjp_QyxWY1Lz96S2KYlSB9ALGBayCqtl28w_jWpXxuYY9ZwHqHC8gI_uo7hvlTJeQwDUz5h3sRY_BDMw2HmDigXGqe7A0xiIPLoC9NorBkDmX00YeuHVXE0nCLdJgGel9qedS7RivtdF3gB72Ln7klwM1ZCunyIK9zmgG1Ru-Agl0jTXGdPzJgzJ4pV5XuM29Q1eBw1AFOoxnJbFMzbZYbiulIj35DyLcjwswN6Uvw-MX2RkCX2tZAy8pD5Jo9S_pe3TrtVGLEG6VXfmP0epSYmEEqnJl_ofDC5w7w2Y_2EMBulWkFGKip7BJfaltDkhWcaX7dMHMT5MsNv2hxQiGb9Z1j-Kz6K2_o8hEOjrSalhyj9bot1LBDBVwdB4fsTkJ1k0HUQhQ_dA71iwiZ7zPysQOTTv1AQVCPZR9Mmjdj1F3D6IGtKBTCzI99ZwEfjztD0qXaudEKBTmYU08GaTXQwGJj7KkNN9NUa7p2b02w=w995-h607-no" alt></p>
+<h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>Codenvy は便利ですが、情報が少ない面もあり、なかなか大変です。無料なので仕方がないのですが…</p>
+<p>最後の URL の確認のところは、Commands という機能があって、それを利用すると手間が省けます。</p>
+<p>それについてはいつか書くかもしれません。</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.j" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+    <a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-url="https://dev.twitter.com/web/tweet-button" data-via="twitterdev" data-related="twitterapi,twitter" data-hashtags="example,demo" data-text="custom share text" data-lang="ja" data-dnt="true">
+    Tweet
+    </a>
+    <div class="fb-share-button" data-href="http://asterisks.netlify.com/2018/11/09/codenvy-vue-starter/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://asterisks.netlify.com/2018/11/09/codenvy-vue-starter/">シェア</a>
+    </div>
+    <a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fasterisks.netlify.com%2Fatom.xml" target="blank"><img id="feedlyFollow" src="http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png" alt="follow us in feedly" width="71" height="28"></a>
+  </footer>
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'asterisks'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2020 asterisks - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>

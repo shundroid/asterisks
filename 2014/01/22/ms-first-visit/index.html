@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+  <title>C#、Unity、JavaScript、PHPを使いこなす小学生プログラマがマイクロソフトで最新技術に触れてみた - asterisks</title>
+
+
+<meta name="description" content="CodeIQ の記事が公開終了になってしまったため、こちらで公開します。  小学5年生でC#、Unity、JavaScript、PHPを使いこなすシュン君。2013年夏に開催された中・高校生のためのプログラミング・ITキャンプ「Life is Tech！」にも参加している。 その後のアプリコンテストでは最終予選まで残ったという。そんな彼にマイクロソフトの最新技術に触れる機会が訪れた。彼の頭中にはど">
+<meta name="keywords" content="from-codeiq">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#、Unity、JavaScript、PHPを使いこなす小学生プログラマがマイクロソフトで最新技術に触れてみた">
+<meta property="og:url" content="http://asterisks.netlify.com/2014/01/22/ms-first-visit/index.html">
+<meta property="og:site_name" content="asterisks">
+<meta property="og:description" content="CodeIQ の記事が公開終了になってしまったため、こちらで公開します。  小学5年生でC#、Unity、JavaScript、PHPを使いこなすシュン君。2013年夏に開催された中・高校生のためのプログラミング・ITキャンプ「Life is Tech！」にも参加している。 その後のアプリコンテストでは最終予選まで残ったという。そんな彼にマイクロソフトの最新技術に触れる機会が訪れた。彼の頭中にはど">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://lh3.googleusercontent.com/Z3b1k8fY5rW3Zlt2zXyyTk3GvFQKRKLRXkPe-q38cAhucLx2ByqA8ARhBK6nkHcZ2FNccRsPUo9y0zeenmaAMP3Iaju_NkhVmHErWpUwCqwC_T3BhNqx0ggQoBj41EE_KpjZOw6b8FNXa8bteFe5tmlUw1uR1efeD9j_3V-wV-6LNzhxE8YF5GUaaYWV6VcX-lMBGEuSd3P7crYTxq_p3rK0NT1fMLCtNyUS7XxQMqDQsXUsHJhgqnLwd6BfZOWX9UtInlZBY1d3A6Zs2wg-f8YAJiJ1DitCVpfpktBigWy7NLy5OI3dWi9emh4JB59PlsDecw-oLn_16Dm2hN8qPHUlsm5lR0ZkCOZ4nIGiBVgz4Bs01o0090hYiNSb6sGS3k5H-CUeozfWbojQNTa6wtF1JkOW8gFRa27v7-aVD8siSnTS6uuMVxy4LJ7P2YlDs3B5ftksc-E78DeHaW7pndhLXr1nZOIjyv4ogOzj9m3tyA_bpYLguArfPZ-x4I-e5ImfgNHk-KXYe0eabMIprF7KRvol0h4Fy2ky_3rI9GkCE5ZEL5PglKftUsXfr1E5McW3JMQOdV6xKZ5pe8qhn0mnQxoa-yMUB6JdJt4=s300-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/zH2fC9zS9rTptqWS6uA9rf6CHbTltUpiJqk9UkvwryT4RWh52BKxT4VyU26rKQEF-U7WU4F58XzOVies3PT0AialFJ23JICQTX5oXPy3MmnbidGsEpLdTmcmWt_jD66XHMNHdgawRpQAbkSZWjGBZ0L0JmQkxnXUA5KwKIl0Z7tEQFegfAgdD6Mpi9b7B6dX_7QHPuGF3-r6uuxQogQ_Z7F-DfHVtqayLnOeYK470usamH22uTrGZUHEibBAQEKdCKp-GblXGi9KwQqKvbFylvjjw3AHdRTj4Bf4YblZJl6te8RhCoRyBoXYRrdk5j9F9r6YRi1YlGv2Lqe_75Bn1cg4ue07EaSlU4F3GMY2EB_ClxYd3hp6lVLbNOqfaiptzwLntKfmlEJ-JXj3G_TJdxgMQpooycGM5AGdQPZFdaAMhHZxmR820XGvVBZr3yIDUmjL2zf_aGji719QiizvTK4fdCJqad7oQgteeCLOWy_4djxSngok4XJ7-ZL_Kt2CqfWl7tX3jFnu8bl5oyrfaADx6df8gQtrQZJF4RLi3dd8R65yd2c_Jsm-WguPTfiyRS135niuMK_1IGVVzC--joQ0f8BbB6jcvKgsN-w=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/W2FAbd7t9Zi0It-ZC_WZEAjNJxpwun1oH_I9JJODUGveIeGROKVI8qtMfPvvxD4mSizKPS4LyRWWcY3-VScw96RLlQv-y4p6CHr82Z8Rs84HxScjtyYeHyTaQKCh1emKNqGuoL-X-XSra-ccA4dq2ZHPdThFTzX4JlcHs7TLwG3hPVXLoFG5zBPT4LtzaSGhC1q3L4itvQ8TUZkHd6lLY0qHUseYDGot6iT_I-Z_LBA_mrVC5YHFvceZ8kkW71XCcanYc-cxBtRIHH2W8iGbQPUN2HiDMRMoLRAbdDYzX-vxmjfWFYdUGXC-YEzYFLZYuqlOzgMnom2onN5Drih1ldHAOdVKfzhmGZPvxgdEv-K8iSBDDmCvjczAiic5JwC4RuqPeDGBKoO5O0QunlXWj9bgf2ANRU46BCrCXdGiMqAJ2VJHIEzZ-fQ4r3DfOMb4bJAEqOfBelQChqQgW2Qi4gQ54Xq9iyVNbhZFGF_ARbCYFQqNraUeMEGgcR8U9jm_Si3mjXgbZqIKoOjAOrHA4_dZ_EleQMTXOz7NxKjV62oHpm6whmKEGOP2g8icZ6-b5JEuZaf4tLA8wi4MrBkI0kpF0cjGOOa422Sslc4=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/LWcxMO40XM5QZ6WiwCOOk27SHHngxEzsZq4LFuxbk1AbFGcoFHPE7kl1rdMP695twpclq8K9ZRKXT46I6C5RKXMzPFyH5ivIBeiSRLQpsj1Ohyyg5BA7RVnp1vOIRTGUpzuHri_OunwyslO8kpIhAmfShc5e7l_POoMYoQZJrDnhpwJmI3QJJeJQ77mcf4bjo_YkhEhVzgI-QtxcWKVxuQagvjlUO-Gdi8iUmxpqpX9WowcpYI9DarqIqKNJ3sfAg5Gvt1QhcJpxUNW2DVtl7XtCex7EFchFPPYMKrLjMS3jbr6fDvicn60X8EcdLk00_Bmfh_HTYpFW8vyqef5k8OHamluIUc01DFJRvZeC6dR5icpEt-il70zvlJ5npPnyId19d6en6VXHBKBKfYcwQEoBhRaoqZ_9VWzXv4-IsoY4n7vbN6As6b1tFURfgifmTm52Wzj_K5TKagS1EAC7-iJErljewTAxLCnmPs8GHbJuRJad0M1A_yCoFvz0JkzAo6m2NtPXAe0Pz2TlTsmWY2RtSh3e0ZtQha1QrLhXXBLvyhaBGWfhBByiWesc3KNtK9pUFLxTkpi-BdF6PJujJF9IHr5JhA3R0KoTZ_c=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/XneHiCCN0M6uZGqeCNYlBhSU_sT5nccKiFzcZaEMhWMi_HgvZWYFQCfrsnHFSHo12ryLUcZxLS9rjRmYXExoUX0yrfvo0cx3bVX27i_WRDYJ_0EKAI0KxR3UfodWoKtQZFarcDs3ueiyrD0dizEjxAtI48Yj0tdhZT1PYIOjSIne_W6z1syXEbfNwOgagH3v43xqmCIAU-xrCH1O3OGZIw7Dy2C4bFAVtXHzTROJYw9Q4WIxlWCc4ITsTYEWpGAE0vNwL4QvWF8BOJhy7Xz8dWDRZv5iBXRHCCQzS2ar-EYdJ-i70YjhG2izpmdUn9ct-ncoHr_s2wp-YBjOAfDI4xKzIq8KpCEUG8siCLX3nG5bXQsBU4dLvaGp7itEfb3l-jq2_4y0GkLAWavhF0enas44biPr7i2rnZ_1ssGWl3-sQ1YSM93ZFsRWSNeCBDtwPCcfyUXuOMRvM3zKjXgU4snWmGtgvl_C5uzTUGnDSTrbcRBt2xt4NmVl62UeTNyewqzLahK8mVeDgQiBAMHrSwlaEPCLX9LU94CqqMKbF1DFlvgANu9yjUkp0bIcQeMJO_Yp27W7b01hUPh1anIkxeeY_WLB3jOFOQUITms=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/yPUUYqbn8BeC7NEjOvgcXsDfiU5xSKUJK9MHM4nHvfwJXk4zIJQVOEq-N_EW9lVQ94SQSO9-kyALe-a6isa_136NI3QEaw63Um6GNvJF4heoeUS0kUPqga6CxqraobdUdlkFeCrVOOvyLkp5m682yX-C3UwNpujohFmarh0XM6q-4oopeY11cXKLHAQr0X0vNZMURIZgo8WVIZ-KA5nIJYjODPtvKv4bVzFnkQB1WIMJsDGvlYanmoGkoniRKrEB1H6mn1jy1OlP4yQiST_Q3WkuhzhgA3GPEOW5GbihGGEcQUxQJCmjri-5tzx_Ro1FdK05inLzEwFJ3FI15hnPlJZbcXQl5UZdibmGJEpE4R1C7b69fPBUQCTo9kjZdK_qzL6XdS0Qppx_XvRFOjRh6bpnumEQCvS9l0R5Y1iB2eSpY-2WHw6KI-aKoJhlla4Ss8OCqUZgTHCSGw-hT86eJWScewQANU912DKo5GXj2hiK4Jsc-7FhPXhSRD45r82pMXWekACpG-ozgr3QpgfAOofGl1mM4fXwCJcVB-Gn_hcmoCMSUJCq5IJtM8ndKRnf9VFvBRNUri4R-Rv8omswy5gtziXJRxFxnJ0zb5Y=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/TcW8crw_GKXRM8EYDrWmzK9_VG_TSXjzpHl8XXtRCnHfa_7VW65eEoHuA3HWDIXi6CgT4ovYR7WppvA6OgdGWti_y1I97e6Slg-CZjS9Kk4OQJqovHYi0SFzVPLJoauY_fgxeAl-IZHT2Sxvzw6bZPXKgyTuL0pxrboilkKesyqMVfRic5CxWr524ly6Fb9_XG8_pS9iYasxVGjIpINpFV0eMmHvvmP_ybJgfKEIhW2R1t4AJ1i-N6ZDpFARbSYtZAEGIWnNseNVhwp7fXPXE12lafnpAP9pgsV_kmdWFu7cQI3iqQpGZ-9nPMteUqCgzmu9aB-obdEZj-Zp7Fmw76T0B7nkUFHNThSWGqYzvmEvZ7b9XtK9C3nZXuWp02aK89SkvqK1wpaXQKFZewBrg3ykHESBL9VSrHH0--Q4iPHiDStPmd1Fd_NEs1w1nCWj3O1BEfD18rd-vNJAGw0mUDSLzB4BXoFG6xNbBrbBBDAgVJvlF61eIXfya0xoHZJnxeqrO2yVE1uhY9xd-ly75Nag4QriunnPtjTOGtzHm9d7gk5vffdS1XaDb813-MguMAKyRBqQWMnTSMLls0NcRDiS2WVjl5QjQzXFTvE=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-CPapXFaGyk1yoGYz_L_BgHFjbHU-ExIaC26qAShiIIvQfUsZPOjZ5HKtToxOMPyM-6s8WbZIGJLGJUqkV50RuH5oxAYujIegI4-uJJnEqdKJT6HiYOBCMLxxoVEjkHpRotY9Nj2xUtc3WPmAJ9lzcAKI0ESY96clP0I5mK0-DiZenBW8KkQKNK1xXx_usWPulIywWg6RizhrTicGtqnnqAgjom9ZimidsVAs7C9pcud1PxezOoGbueekUgh3nKVunO_ifj06PxZJe822zbB5wWyKilch39e9DSB6OVT_ROp16BDkkgAM5IXwwqVo_mFfb2D2E7jUG0jwdsMBgVrHBBFaZDS4pPSJTk42fv6krvvX7Jh89eY2iDtkBC5SFBo-fmU5xIT2EDJijAJ9rPcGcaJnfLDF0aTUNFIzYDXlZre_hGzgBNby7aDy1aVNsxrJeF-0YgLozqkR5CHviDdcBhvOJ7JMxFFyJglL7h2K66SDo7BXWM76_eSgzzbzQAhUL9qvsqOYycoGb79ybM5QiWqAKp45QokZ9npSnB72vWfn41pjKdTLmdud3e1XUMGFnwdxwWZz_k5OWfp6SfKtTXdesEdhic8C9RWXOY=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/BV-AN2rBPv6Czh-w7r_yUDf0fZmljmaRVWLK0oobLrk5FNkCrWWeNBTPAscAXXmFJ1QKfV-cUXYQnIiNBNaT6OXCZx8Y6PSR6BYsLSW6WislmbmQfS1OocR3Z4kXaEuOF1RZeKcGRgp75OkicSKkEzjEzEPrtNBLOboY8JAaCLEAG4nDEvYGyhdNQJsWQpoIxGfif9ZJCQImHT5jZ30_HNAxCOsnrdR0wIapHL2Qa9gpk7Jlf4iSV1T7MIS0-AiU1D5dgEwS_WDZV7fWgWHH5K96xDY31VN7BoCfPa40zNyQaUACx72DUrKDb3-yZCYEmTniYMFcmbo6GsIKUBSOcUePVGnvbU2Z_aUQTAoDxCA7ujoKuo3sRe-eUYILLoADvXDVXpJALQJnZrhv5WGWpP3HEkhxKu47CujjVRqhfnkE1SofLzyxM2GrphmVVfaJylSKYxsz3McFPLsmeeN3u3pX2BC5gZh3zWekaRMNVOGDTd3hoWpT1riA-w4iXFvzk97b5uA9QcqM7rzvSC2MDLrfQnyJjufJSkoo_ZNGY3EWqkIwfFoqTAIG-cLAf4NGr_tuoW_ZJexezdQ6Q9FO3H6r3XW5fm_GrzfFbyk=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/tCEYqfnq4OJfUgT7E9pBaV2svMQmjr_l2Zdk5K90ITqGlYLehl18YHdXG0E8OsoBSsrYsi87Qoh-aQOyDoqIUozBXC1f6q9ZpeNCUe5qBmEOyACTZAsB8IMSVa8cFqbiGh4yFuZBkCt3HL4DYjqtrwyOc6GFcpqNeeYJYESpyJ7d8dIrIPVO1jwj-06I5UJhC6NiGTdgJPRPQc8eXFN86A5_qd5R9l2NYJ7GN6x4FYyN6_L6A-nOO2KueMxSB9nH2oXwTrQM5kn7gcuOqv8Lj8EBLPYfD7dIbNXbwgi3w993CViXEJ0tjVJk-EnMTA1aCjFKm8UqMWbm66x6nSzoLRLhJzsCRTS65h_X8OQRFl71qFZu-OHoyplOuXysfjNKRo3t2MJBsDQi2JU0kzLS17x-NE67H-kTsZ8fProiYncLItJWTL1g3drYB28mi4TlIg_YuDr1gkWJqn27Iv2VRIhAP1L96s-YIz-4K2GOuX8ZGVFPFxnQifs7z5ogSRhlO0_CB7Niu6p-lQosCFXr-eEvDdSUS0kyXDZeSI4b5uma9c632gIjKN2kQYOnMA01EK_Z54jdEudM6B1WnTI8ElWtAqgzpuDbcNX5RiY=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/V-hte4gUBggKjn0N3VCV64kx6_1_DgRQRoKEex_M-5bAmrZV8Npw_0lpi9QD0G9qvqKTB4p_W3onU0ct6P4zErZ7XlnQCw6OgXLpxRLqEr1R0UIXHLVYvIdNiQY4RLmV_IuGT8h2AbZoiPrWECHopM6fM_h5vfYZJrneVo2Z264ioEucDi_cFpGFMTpFOapcrC8FtjM2ml3UbKSJA_1N_WThPHi4dDS8poYdEAjsUHQnwAj6YFe8_1iTANVw-DZ-n6xrEUuBHBwqmVVuBZKx4myTDMdZ2agSjl6LunOkGtm-djvopKIh2nYN9Q4-755FL7eq9kaf5V0H3HsgbORi3kcyQHiXjUoWRQhpd9xFHnPKnQROMQarD5BxryW-hdBf7nWN-JacMorcQTcTCD6hMImkcx1yWZyoZRMGdttf6f9R8BctJJlzYA7Trhn_TjbCZUYTKiCXZQNH-qWqFGFHhkydA5yat3MOKqMaj_UlzSbre0ykePOmpKCKKC9_JddZnU5l1znH5EzzncMFATu5L4x6QgBk2b6Qexstq0-tH8Lbf5GDHzxrXQaaJM2K2vh95oqFtU2csZ1ISKlpVLz5feZm6yGKgMLJ6U85rcc=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/ZH11d0iR2-H4cGqipB9A9E-UjIpN5locRMnaJhI8dSvBIva4OhzfDzv1cZ--d15QNdJLWGsChWO7np1JBgIIhI91mTulsUnjHHHIo3zVxS98sLFmRoYKBclIocv9UQFA8d2rbTzEGev0eyYOQkttxgauwyJQcQA5U8TAAYut_fiEXLD0m3350gu0YF5x0CJXgQpSBib29uyKC2PrWg3AiSGcd7luyBRIlu6vM8xs8VW4-dhHLvaTorMdkdpmglUQLhsKMpqEM2Sthkn75nQgr9C38xaJ4oWod8AyqQpNtG9EUyfUn9TxM93hHZ14FwqE99AFa6B6FjYoCQdDl9J72sjrjqAR9WbwyEGOKl8L1VWJg2CMjeu7U02d-IzRIIgsleAUu3EA8XHLVOYAOhoXpeDk5u9g4co5UpH58EnJrdtL16-LXTkP0vV6c3pTIG-OzL_4mrMxJAPa7jsWQFzn_cYWuskp_6Er-2kU81FpOD49YU4GuGtQwM3GwNoL_xQ1ofiltCcQM3rWDxF2Ivvvm_l957-0xWRq-4pip7Hrm5uV5xSh2AJTDihhtwPeVcDsaeUjpA8gk_KfA-vUbzWoOkc26blnkGhFAv-Z4Gk=w640-h394-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/qSk3CQ1ayuxfM97FtVNg_FxoxBF8v6vs141X3pZ2_eLK1w8OD0CUvJ5Flpw1icxJd7hYhTkZkSKrWwQg3zIT19GRyJw7fhH4DzBIxUvTBWPnN-eefsLWv5XQft7v0GBbrzYBIWpM1cgQWZ3HJNYTjIuugTOP3qpHEcp6mqg6qrP9L2KzJmUhsCGCRvyBPQLcz86X1MhR_Lt0iUUDkm2drlNrz05OQqhwaRbtGqUXwVxoZr3A4rV6uc8Evin0rHLLz0NQ_D6H3ydDnbWaQOVJ3Zq6T4ohh-oWsRG0byYzOChANzdgBhBWNvsClWdHJw0FxhEPMXWJ8VO5j0e9DA-A3U2JN8cCwXPLlRoBXRon58Q9TO3-cq0616FA7-6vwNSsuulcJnGwZBSXLHmTFcHkUJCnYuEXGQv6MkmUsJPhSdI7l8WpdpVDZzj7DFWbXLVO2lF_YoFp_hW3btVhrPFRSRJ9LR4t-Y94iOch7HkvTHFhKrYLpyY2LXnrdOAlee5E_Z3AUCM17n0P-_mH6Is1nkyBoNJY89yRNKffb0GplLD0MmUmlVwVwFJhPP_all0XqzASi5opC-KUrsnTysNhmrUY43DFAG547mhnhJU=w640-h426-no">
+<meta property="og:image" content="https://lh3.googleusercontent.com/YvAReGztD8g4GMHVgLXbRlk-F5UsiDC-FYO2HmJ11Uec6KmY74PWEPjfyH2mbMH1elU3RiITkyZYppwPyoHMJTp89ngtrli-NMUK-NItWb9p_0SAk97gybnR4Bg0LweK4IAUihTAYkm3_Ll7GYCudGG_2q324xSOpD7ryAevlbtp94clixIn0EBZZlwDRItf5JFozbnkICWPt4JLQcVRyfgRClzaYZ5f0EBJyA9Sa7LIJdXx5uIrFsgJtWzb3B252eXCd-vTql-BngJu0XA7gQ-o7ct-eK9CPTkP7CTwdlQu2gF1ssZ5CVliCEEjFgaPhZuw4xDMs8Gq3nwGNWPrfEi3GmUXZEg0Wj-rDbsaZ5VtTMnkm0imONsWHQRgG8X8cC9FPHL7k8e6g0fknWd3Z7NuklwIV9aTjgfbuQ_OsXBOECIai2ayLuAjLTTioepC3UDGpjS2I7klzDTmqFcmAmXSH3qURKvUnvDrTyD8iJW7-SBsndQMeECw5-z7sd4aM0_NybFkC4W6Kcx_EQQq58kkw55FCSox3tx6yqGhhzMxrZCrwVFQLgNYz1Pibq4ffy_Xfn_nFe50b9-7a9Cyi4uwQOFdtFY_Eitkw24=w640-h426-no">
+<meta property="og:updated_time" content="2020-03-17T02:25:18.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C#、Unity、JavaScript、PHPを使いこなす小学生プログラマがマイクロソフトで最新技術に触れてみた">
+<meta name="twitter:description" content="CodeIQ の記事が公開終了になってしまったため、こちらで公開します。  小学5年生でC#、Unity、JavaScript、PHPを使いこなすシュン君。2013年夏に開催された中・高校生のためのプログラミング・ITキャンプ「Life is Tech！」にも参加している。 その後のアプリコンテストでは最終予選まで残ったという。そんな彼にマイクロソフトの最新技術に触れる機会が訪れた。彼の頭中にはど">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/Z3b1k8fY5rW3Zlt2zXyyTk3GvFQKRKLRXkPe-q38cAhucLx2ByqA8ARhBK6nkHcZ2FNccRsPUo9y0zeenmaAMP3Iaju_NkhVmHErWpUwCqwC_T3BhNqx0ggQoBj41EE_KpjZOw6b8FNXa8bteFe5tmlUw1uR1efeD9j_3V-wV-6LNzhxE8YF5GUaaYWV6VcX-lMBGEuSd3P7crYTxq_p3rK0NT1fMLCtNyUS7XxQMqDQsXUsHJhgqnLwd6BfZOWX9UtInlZBY1d3A6Zs2wg-f8YAJiJ1DitCVpfpktBigWy7NLy5OI3dWi9emh4JB59PlsDecw-oLn_16Dm2hN8qPHUlsm5lR0ZkCOZ4nIGiBVgz4Bs01o0090hYiNSb6sGS3k5H-CUeozfWbojQNTa6wtF1JkOW8gFRa27v7-aVD8siSnTS6uuMVxy4LJ7P2YlDs3B5ftksc-E78DeHaW7pndhLXr1nZOIjyv4ogOzj9m3tyA_bpYLguArfPZ-x4I-e5ImfgNHk-KXYe0eabMIprF7KRvol0h4Fy2ky_3rI9GkCE5ZEL5PglKftUsXfr1E5McW3JMQOdV6xKZ5pe8qhn0mnQxoa-yMUB6JdJt4=s300-no">
+
+
+  <link rel="alternative" href="/atom.xml" title="asterisks" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.ico">
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55214112-4', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- End Google Analytics -->
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+
+<meta name="google-site-verification" content="1ThXLD31B1KlIfXQTLS-gbYe8WB5boRoUGdxuWOA04U">
+
+</head>
+<body class="monochrome">
+
+  <!-- Twitter Share Button -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <!-- Facebook Share Button -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">*.*</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/"><!--asterisks-->*.*</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">by shundroid</div>
+        
+      </div>
+      <!-- 
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://cn.gravatar.com/avatar/35fef74d731255cd569c2c2b0b9e87e4?s=200"></a>
+          
+        </div>
+       -->
+    </div>
+  </div>
+  <div class="body">
+    <div class="search-area">
+      <input type="text" id="search-box" placeholder="Search By RegExp \*.*/">
+      <button id="search-submit">GO</button><br>
+      <div id="search-result">
+        What's RegExp?
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" style="color: #cfe3cb" target="_blank">Here</a>
+      </div>
+      <script type="text/javascript" async>
+      (function() {
+        const searchBox = document.getElementById("search-box")
+        searchBox.addEventListener("keydown", e => {
+          if (e.key.toLowerCase() === "enter") {
+            search(searchBox.value)
+          }
+        });
+        document.getElementById("search-submit").addEventListener("click", () => {
+          search(searchBox.value)
+        });
+        function search(text) {
+          window.location.href = "/search/?search=" + text;
+        }
+      })();
+      </script>
+    </div>
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">Category</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Blog-Management/">Blog Management</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Collections/">Collections</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIDI/">MIDI</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Made-by-me/">Made by me</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SERIES/">SERIES</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Uncategorized/">Uncategorized</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity/">Unity</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Virtual-Environment/">Virtual Environment</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web-Programming/">Web Programming</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Windows/">Windows</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">diary</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">Tag</a>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ace/">ace</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/async/">async</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azure/">azure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/besiege/">besiege</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitbucket/">bitbucket</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bower/">bower</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/browserify/">browserify</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ci/">ci</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cities-sky-lines/">cities-sky-lines</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmd/">cmd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codenvy/">codenvy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conemu/">conemu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs6/">cs6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csharp/">csharp</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cygwin/">cygwin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/">diary</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dll/">dll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domino/">domino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electron/">electron</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emscripten/">emscripten</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from-codeiq/">from-codeiq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gist/">gist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gpu/">gpu</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hacknet/">hacknet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/halstar/">halstar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/highlight/">highlight</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hueman/">hueman</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iis/">iis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript-nodejs-line/">javascript, nodejs, line</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/">less</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/litjson/">litjson</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matter-js/">matter-js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/microsoft/">microsoft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/midi/">midi</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mime/">mime</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/movejs/">movejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mozilla/">mozilla</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/netbeans/">netbeans</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/niconico/">niconico</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opus-magnum/">opus-magnum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oxygen-not-included/">oxygen-not-included</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/poly-bridge/">poly-bridge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/">privacy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/putty/">putty</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raycast/">raycast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reflection/">reflection</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regedit/">regedit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rx-js/">rx.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sekaowa/">sekaowa</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shenzhen-io/">shenzhen-io</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spacechem/">spacechem</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sphero/">sphero</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sprite/">sprite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/steam/">steam</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tis-100/">tis-100</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tumblr/">tumblr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ugui/">ugui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity/">unity</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unity2d/">unity2d</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vagrant/">vagrant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualbox/">virtualbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/visualstudio/">visualstudio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/">vscode</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode-ext/">vscode-ext</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wercker/">wercker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows10/">windows10</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yaml/">yaml</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/youtube/">youtube</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/そういえば/">そういえば</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">Archive</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">69</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/">2014</a><span class="archive-list-count">2</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/profile" title="Profile">Profile</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/about" title="About This Site">About This Site</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/shundroid" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://www.youtube.com/channel/UC7SEX9GABXlBaCb9vZVPIfg" title="Youtube" target="_blank" rel="noopener">Youtube</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+    <a class="twitter-timeline" data-height="300" data-theme="dark" href="https://twitter.com/shundroid_pub?ref_src=twsrc%5Etfw">Tweets by shundroid_pub</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-ms-first-visit" class="article article-type-post">
+  
+    <h1 class="article-header">
+      C#、Unity、JavaScript、PHPを使いこなす小学生プログラマがマイクロソフトで最新技術に触れてみた
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2014-01-22
+</span>
+
+    
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/from-codeiq/">from-codeiq</a></li></ul>
+	</span>
+
+
+  </div>
+  <div id="toc" class="toc-article">
+    <p class="toc-title">TOC</p>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小学生プログラマシュン君の素顔"><span class="toc-text">小学生プログラマシュン君の素顔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#なぜ、日本マイクロソフトの訪問が実現したのか"><span class="toc-text">なぜ、日本マイクロソフトの訪問が実現したのか</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#テクノロジーセンター内の設備に感激"><span class="toc-text">テクノロジーセンター内の設備に感激</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kinectやマルチタッチディスプレイを体験し、目はキラキラに"><span class="toc-text">Kinectやマルチタッチディスプレイを体験し、目はキラキラに</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#「周りの人を幸せにするモノをつくるプログラマになって欲しい」"><span class="toc-text">「周りの人を幸せにするモノをつくるプログラマになって欲しい」</span></a></li></ol>
+  </div>
+  <div class="article-entry">
+    <p>CodeIQ の記事が公開終了になってしまったため、こちらで公開します。</p>
+<p><img src="https://lh3.googleusercontent.com/Z3b1k8fY5rW3Zlt2zXyyTk3GvFQKRKLRXkPe-q38cAhucLx2ByqA8ARhBK6nkHcZ2FNccRsPUo9y0zeenmaAMP3Iaju_NkhVmHErWpUwCqwC_T3BhNqx0ggQoBj41EE_KpjZOw6b8FNXa8bteFe5tmlUw1uR1efeD9j_3V-wV-6LNzhxE8YF5GUaaYWV6VcX-lMBGEuSd3P7crYTxq_p3rK0NT1fMLCtNyUS7XxQMqDQsXUsHJhgqnLwd6BfZOWX9UtInlZBY1d3A6Zs2wg-f8YAJiJ1DitCVpfpktBigWy7NLy5OI3dWi9emh4JB59PlsDecw-oLn_16Dm2hN8qPHUlsm5lR0ZkCOZ4nIGiBVgz4Bs01o0090hYiNSb6sGS3k5H-CUeozfWbojQNTa6wtF1JkOW8gFRa27v7-aVD8siSnTS6uuMVxy4LJ7P2YlDs3B5ftksc-E78DeHaW7pndhLXr1nZOIjyv4ogOzj9m3tyA_bpYLguArfPZ-x4I-e5ImfgNHk-KXYe0eabMIprF7KRvol0h4Fy2ky_3rI9GkCE5ZEL5PglKftUsXfr1E5McW3JMQOdV6xKZ5pe8qhn0mnQxoa-yMUB6JdJt4=s300-no" alt></p>
+<p>小学5年生でC#、Unity、JavaScript、PHPを使いこなすシュン君。2013年夏に開催された中・高校生のためのプログラミング・ITキャンプ「Life is Tech！」にも参加している。</p>
+<p>その後のアプリコンテストでは最終予選まで残ったという。そんな彼にマイクロソフトの最新技術に触れる機会が訪れた。彼の頭中にはどんな夢が広がったのだろうか。 by 馬場美由紀 （CodeIQ中の人）</p>
+<h2 id="小学生プログラマシュン君の素顔"><a href="#小学生プログラマシュン君の素顔" class="headerlink" title="小学生プログラマシュン君の素顔"></a>小学生プログラマシュン君の素顔</h2><p>2013年も終わりに近づいた12月26日、日本マイクロソフトのテクノロジーセンターを一人の小学生が訪れた。名前はシュン君。東京都に住む小学5年生だ。</p>
+<p>シュン君がパソコンに興味を抱いたのは小学生になった頃。<br>「母親の携帯電話やパソコンから、祖母にメールを送って遊んでいたのですが、小学校3年生の時にPowerPointのアニメーション機能にはまり、『もっとパソコンでいろんなことがしたい』と言うので、まず基本的なITスキルを学ばせることにし、アビバキッズに通わせ、1年ほどで修了しました。</p>
+<p>その頃、幼稚園の年長組から通っているレゴスクールで、今度はマインドストームに夢中になり、『自分でプログラムを書けるようになりたい』と言い出しまして、小学校4年からプログラミングの勉強を始めました」と、シュン君のお母さん。</p>
+<p><img src="https://lh3.googleusercontent.com/zH2fC9zS9rTptqWS6uA9rf6CHbTltUpiJqk9UkvwryT4RWh52BKxT4VyU26rKQEF-U7WU4F58XzOVies3PT0AialFJ23JICQTX5oXPy3MmnbidGsEpLdTmcmWt_jD66XHMNHdgawRpQAbkSZWjGBZ0L0JmQkxnXUA5KwKIl0Z7tEQFegfAgdD6Mpi9b7B6dX_7QHPuGF3-r6uuxQogQ_Z7F-DfHVtqayLnOeYK470usamH22uTrGZUHEibBAQEKdCKp-GblXGi9KwQqKvbFylvjjw3AHdRTj4Bf4YblZJl6te8RhCoRyBoXYRrdk5j9F9r6YRi1YlGv2Lqe_75Bn1cg4ue07EaSlU4F3GMY2EB_ClxYd3hp6lVLbNOqfaiptzwLntKfmlEJ-JXj3G_TJdxgMQpooycGM5AGdQPZFdaAMhHZxmR820XGvVBZr3yIDUmjL2zf_aGji719QiizvTK4fdCJqad7oQgteeCLOWy_4djxSngok4XJ7-ZL_Kt2CqfWl7tX3jFnu8bl5oyrfaADx6df8gQtrQZJF4RLi3dd8R65yd2c_Jsm-WguPTfiyRS135niuMK_1IGVVzC--joQ0f8BbB6jcvKgsN-w=w640-h426-no" alt></p>
+<p>「お母さんにプログラミングの本を買ってもらって勉強しました。最初に勉強したのはVisual Basic。本に載っているサンプルを参考にアプリを作ったんです。そしたら楽しくてプログラミングが大好きになりました」（シュン君）</p>
+<p>お母さんは「本に載っている課題が全部できたら次の本を買ってあげることにしていたんですけど、1～2カ月でどんどん進んでいくんです。よっぽど楽しいんでしょうね」と笑って、シュン君の言語の習得スピードの速さを披露する。</p>
+<p>そして5年生となった今、C#、Unity、JavaScript、PHPを習得。<br>さらには、自分でアプリを作りたくて、Visual Studioを使い始めたという。<br>そんなシュン君の将来の夢は、「マイクロソフトでWindowsやVisual Studioを作ること」。</p>
+<p>現在、ソフト開発者として活躍している人の中にも、小学生の頃にプログラムやコンピュータに触れたことがきっかけで仕事に就いた人がたくさんいるはず。</p>
+<p>今回はそんなソフト開発者の原点の瞬間に立ち合うことができた。<br>その純粋な姿、想いをレポートする。</p>
+<h2 id="なぜ、日本マイクロソフトの訪問が実現したのか"><a href="#なぜ、日本マイクロソフトの訪問が実現したのか" class="headerlink" title="なぜ、日本マイクロソフトの訪問が実現したのか"></a>なぜ、日本マイクロソフトの訪問が実現したのか</h2><p>そのきっかけは、2013年8月に東京大学キャンパスで開催された「Life is Tech！」に小学生ながら参加したことや、アプリ甲子園というアプリコンテストで最終予選に残ったことである。</p>
+<p>シュン君は「プログラミングの世界のことを、もっとたくさん知りたい」という思いが募ったという。</p>
+<p><img src="https://lh3.googleusercontent.com/W2FAbd7t9Zi0It-ZC_WZEAjNJxpwun1oH_I9JJODUGveIeGROKVI8qtMfPvvxD4mSizKPS4LyRWWcY3-VScw96RLlQv-y4p6CHr82Z8Rs84HxScjtyYeHyTaQKCh1emKNqGuoL-X-XSra-ccA4dq2ZHPdThFTzX4JlcHs7TLwG3hPVXLoFG5zBPT4LtzaSGhC1q3L4itvQ8TUZkHd6lLY0qHUseYDGot6iT_I-Z_LBA_mrVC5YHFvceZ8kkW71XCcanYc-cxBtRIHH2W8iGbQPUN2HiDMRMoLRAbdDYzX-vxmjfWFYdUGXC-YEzYFLZYuqlOzgMnom2onN5Drih1ldHAOdVKfzhmGZPvxgdEv-K8iSBDDmCvjczAiic5JwC4RuqPeDGBKoO5O0QunlXWj9bgf2ANRU46BCrCXdGiMqAJ2VJHIEzZ-fQ4r3DfOMb4bJAEqOfBelQChqQgW2Qi4gQ54Xq9iyVNbhZFGF_ARbCYFQqNraUeMEGgcR8U9jm_Si3mjXgbZqIKoOjAOrHA4_dZ_EleQMTXOz7NxKjV62oHpm6whmKEGOP2g8icZ6-b5JEuZaf4tLA8wi4MrBkI0kpF0cjGOOa422Sslc4=w640-h426-no" alt></p>
+<p>そこで、日本マイクロソフトのクラウドコンピューティングや、Webサービスを中心とした啓蒙活動を行っているエバンジェリスト砂金信一郎氏に「マイクロソフト社のことや、Microsoftの最新技術やプログラミングのこと、これからどんなことを勉強すればよいのかについて、教えてください」という自分の思いを一杯詰め込んだ手紙を送ったというのだ。</p>
+<p>日本マイクロソフトはIT業界を牽引する企業の1社として、K-12（小学1年生から高校3年生）に関するIT教育の充実に力を入れている。砂金氏もその活動に注力している一人だ。</p>
+<p>シュン君の熱い手紙を読んだ砂金氏は、「これまで小学生からこういった手紙が届いた例がなく戸惑いました。しかし、シュン君を日本マイクロソフト本社に招き、同社内にあるテクノロジーセンター（MTC）の見学をしてもらうと同時に、最新技術に触れてもらうことで、将来、優秀なソフト開発者に育つ一助になりたいと考えました」と明かす。</p>
+<p>そしてそれは、冬休み1日目に実現した。</p>
+<h2 id="テクノロジーセンター内の設備に感激"><a href="#テクノロジーセンター内の設備に感激" class="headerlink" title="テクノロジーセンター内の設備に感激"></a>テクノロジーセンター内の設備に感激</h2><p>MTCが備えるブリーフィングルームの一つ、エンビジョニングセンターに通されたシュン君の目の前に登壇したのは、同センター長の澤円氏。</p>
+<p>澤氏は97年にマイクロソフト（現日本マイクロソフト）に入社。ビル・ゲイツがマイクロソフト社の卓越した社員にのみ授与する「Chairman’s Award」を受賞。この賞は全マイクロソフト社員約9万人の中で、1年にたった十数人しか受賞していない賞だ。</p>
+<p><img src="https://lh3.googleusercontent.com/LWcxMO40XM5QZ6WiwCOOk27SHHngxEzsZq4LFuxbk1AbFGcoFHPE7kl1rdMP695twpclq8K9ZRKXT46I6C5RKXMzPFyH5ivIBeiSRLQpsj1Ohyyg5BA7RVnp1vOIRTGUpzuHri_OunwyslO8kpIhAmfShc5e7l_POoMYoQZJrDnhpwJmI3QJJeJQ77mcf4bjo_YkhEhVzgI-QtxcWKVxuQagvjlUO-Gdi8iUmxpqpX9WowcpYI9DarqIqKNJ3sfAg5Gvt1QhcJpxUNW2DVtl7XtCex7EFchFPPYMKrLjMS3jbr6fDvicn60X8EcdLk00_Bmfh_HTYpFW8vyqef5k8OHamluIUc01DFJRvZeC6dR5icpEt-il70zvlJ5npPnyId19d6en6VXHBKBKfYcwQEoBhRaoqZ_9VWzXv4-IsoY4n7vbN6As6b1tFURfgifmTm52Wzj_K5TKagS1EAC7-iJErljewTAxLCnmPs8GHbJuRJad0M1A_yCoFvz0JkzAo6m2NtPXAe0Pz2TlTsmWY2RtSh3e0ZtQha1QrLhXXBLvyhaBGWfhBByiWesc3KNtK9pUFLxTkpi-BdF6PJujJF9IHr5JhA3R0KoTZ_c=w640-h426-no" alt></p>
+<p>大型ディスプレイなど、近未来的なその部屋の作りにちょっと緊張気味のシュン君。</p>
+<p><img src="https://lh3.googleusercontent.com/XneHiCCN0M6uZGqeCNYlBhSU_sT5nccKiFzcZaEMhWMi_HgvZWYFQCfrsnHFSHo12ryLUcZxLS9rjRmYXExoUX0yrfvo0cx3bVX27i_WRDYJ_0EKAI0KxR3UfodWoKtQZFarcDs3ueiyrD0dizEjxAtI48Yj0tdhZT1PYIOjSIne_W6z1syXEbfNwOgagH3v43xqmCIAU-xrCH1O3OGZIw7Dy2C4bFAVtXHzTROJYw9Q4WIxlWCc4ITsTYEWpGAE0vNwL4QvWF8BOJhy7Xz8dWDRZv5iBXRHCCQzS2ar-EYdJ-i70YjhG2izpmdUn9ct-ncoHr_s2wp-YBjOAfDI4xKzIq8KpCEUG8siCLX3nG5bXQsBU4dLvaGp7itEfb3l-jq2_4y0GkLAWavhF0enas44biPr7i2rnZ_1ssGWl3-sQ1YSM93ZFsRWSNeCBDtwPCcfyUXuOMRvM3zKjXgU4snWmGtgvl_C5uzTUGnDSTrbcRBt2xt4NmVl62UeTNyewqzLahK8mVeDgQiBAMHrSwlaEPCLX9LU94CqqMKbF1DFlvgANu9yjUkp0bIcQeMJO_Yp27W7b01hUPh1anIkxeeY_WLB3jOFOQUITms=w640-h426-no" alt></p>
+<p>シュン君の気持ちを和らげようと澤氏は、「この部屋を使うのは主にエグゼクティブの人たち。僕たち社員もほとんど入ったことなく、みんな緊張気味だから」と笑いを取りながら、やさしく話しかけていた。</p>
+<p>そんな気遣いにプラスして、澤氏の「マイクロソフトが開発するのは、人が使うモノだけ」という話にシュン君の関心が緊張よりも増すように。</p>
+<p>澤氏は続けて「例えばプログラムといっても、ロボットを動かすものもある。でもマイクロソフトが作るのはロボットを制御するプログラムを書くツール。動かすプログラムを自社製品として売ることはない」と説明。</p>
+<p><img src="https://lh3.googleusercontent.com/yPUUYqbn8BeC7NEjOvgcXsDfiU5xSKUJK9MHM4nHvfwJXk4zIJQVOEq-N_EW9lVQ94SQSO9-kyALe-a6isa_136NI3QEaw63Um6GNvJF4heoeUS0kUPqga6CxqraobdUdlkFeCrVOOvyLkp5m682yX-C3UwNpujohFmarh0XM6q-4oopeY11cXKLHAQr0X0vNZMURIZgo8WVIZ-KA5nIJYjODPtvKv4bVzFnkQB1WIMJsDGvlYanmoGkoniRKrEB1H6mn1jy1OlP4yQiST_Q3WkuhzhgA3GPEOW5GbihGGEcQUxQJCmjri-5tzx_Ro1FdK05inLzEwFJ3FI15hnPlJZbcXQl5UZdibmGJEpE4R1C7b69fPBUQCTo9kjZdK_qzL6XdS0Qppx_XvRFOjRh6bpnumEQCvS9l0R5Y1iB2eSpY-2WHw6KI-aKoJhlla4Ss8OCqUZgTHCSGw-hT86eJWScewQANU912DKo5GXj2hiK4Jsc-7FhPXhSRD45r82pMXWekACpG-ozgr3QpgfAOofGl1mM4fXwCJcVB-Gn_hcmoCMSUJCq5IJtM8ndKRnf9VFvBRNUri4R-Rv8omswy5gtziXJRxFxnJ0zb5Y=w640-h426-no" alt></p>
+<p>またマイクロソフトが作っているソフトウェアはWindowsやOfficeなどが有名だが、実はソフトウェアだけではないと、年代ごとにマイクロソフトが開発してきた製品の年表を見せると共に解説。</p>
+<p>中でもプレゼンを映していた大画面のマルチタッチディスプレイもマイクロソフトが作っていると澤氏が言うと、びっくりしながらも少し欲しそうなシュン君。<br>その様子に「個人でもまったく買えない値段ではないんです。日本での価格は未定だけど車一台くらいかな」と澤氏。<br>その値段にがっかりしつつも、マルチタッチディスプレイでの体験を楽しんでいた。</p>
+<p><img src="https://lh3.googleusercontent.com/TcW8crw_GKXRM8EYDrWmzK9_VG_TSXjzpHl8XXtRCnHfa_7VW65eEoHuA3HWDIXi6CgT4ovYR7WppvA6OgdGWti_y1I97e6Slg-CZjS9Kk4OQJqovHYi0SFzVPLJoauY_fgxeAl-IZHT2Sxvzw6bZPXKgyTuL0pxrboilkKesyqMVfRic5CxWr524ly6Fb9_XG8_pS9iYasxVGjIpINpFV0eMmHvvmP_ybJgfKEIhW2R1t4AJ1i-N6ZDpFARbSYtZAEGIWnNseNVhwp7fXPXE12lafnpAP9pgsV_kmdWFu7cQI3iqQpGZ-9nPMteUqCgzmu9aB-obdEZj-Zp7Fmw76T0B7nkUFHNThSWGqYzvmEvZ7b9XtK9C3nZXuWp02aK89SkvqK1wpaXQKFZewBrg3ykHESBL9VSrHH0--Q4iPHiDStPmd1Fd_NEs1w1nCWj3O1BEfD18rd-vNJAGw0mUDSLzB4BXoFG6xNbBrbBBDAgVJvlF61eIXfya0xoHZJnxeqrO2yVE1uhY9xd-ly75Nag4QriunnPtjTOGtzHm9d7gk5vffdS1XaDb813-MguMAKyRBqQWMnTSMLls0NcRDiS2WVjl5QjQzXFTvE=w640-h426-no" alt></p>
+<h2 id="Kinectやマルチタッチディスプレイを体験し、目はキラキラに"><a href="#Kinectやマルチタッチディスプレイを体験し、目はキラキラに" class="headerlink" title="Kinectやマルチタッチディスプレイを体験し、目はキラキラに"></a>Kinectやマルチタッチディスプレイを体験し、目はキラキラに</h2><p>マイクロソフトについて簡単な説明が終わり、今まで説明した最新技術をいろいろ体験してもらおうと澤氏がシュン君を連れて行ったのは、新しいUI（ユーザーインタフェース）やUX（ユーザーエクスペリエンス）が体感できるMTCインタラクティブセンター。</p>
+<p>ここではKinectやタッチディスプレイ、顔認証技術などを体験。Kinectを使い、ジェスチャーでスイッチのオン、オフができるシステムを、「すごい！」とキラキラの表情で何度も試してみるシュン君。</p>
+<p><img src="https://lh3.googleusercontent.com/-CPapXFaGyk1yoGYz_L_BgHFjbHU-ExIaC26qAShiIIvQfUsZPOjZ5HKtToxOMPyM-6s8WbZIGJLGJUqkV50RuH5oxAYujIegI4-uJJnEqdKJT6HiYOBCMLxxoVEjkHpRotY9Nj2xUtc3WPmAJ9lzcAKI0ESY96clP0I5mK0-DiZenBW8KkQKNK1xXx_usWPulIywWg6RizhrTicGtqnnqAgjom9ZimidsVAs7C9pcud1PxezOoGbueekUgh3nKVunO_ifj06PxZJe822zbB5wWyKilch39e9DSB6OVT_ROp16BDkkgAM5IXwwqVo_mFfb2D2E7jUG0jwdsMBgVrHBBFaZDS4pPSJTk42fv6krvvX7Jh89eY2iDtkBC5SFBo-fmU5xIT2EDJijAJ9rPcGcaJnfLDF0aTUNFIzYDXlZre_hGzgBNby7aDy1aVNsxrJeF-0YgLozqkR5CHviDdcBhvOJ7JMxFFyJglL7h2K66SDo7BXWM76_eSgzzbzQAhUL9qvsqOYycoGb79ybM5QiWqAKp45QokZ9npSnB72vWfn41pjKdTLmdud3e1XUMGFnwdxwWZz_k5OWfp6SfKtTXdesEdhic8C9RWXOY=w640-h426-no" alt></p>
+<p>またテーブル状になったマルチタッチディスプレイの地図アプリを操作し、自分の家を探すことに熱中。触っているうち「これ欲しい」とお母さんに訴えるシュン君だが、こちらの値段も車1台くらいと聞き、またまたがっかりモードに。</p>
+<p>砂金氏の「アプリを作って大ヒットすれば、買えるかもしれないね」という言葉に、シュン君の目はキラリと輝くのだった。</p>
+<p><img src="https://lh3.googleusercontent.com/BV-AN2rBPv6Czh-w7r_yUDf0fZmljmaRVWLK0oobLrk5FNkCrWWeNBTPAscAXXmFJ1QKfV-cUXYQnIiNBNaT6OXCZx8Y6PSR6BYsLSW6WislmbmQfS1OocR3Z4kXaEuOF1RZeKcGRgp75OkicSKkEzjEzEPrtNBLOboY8JAaCLEAG4nDEvYGyhdNQJsWQpoIxGfif9ZJCQImHT5jZ30_HNAxCOsnrdR0wIapHL2Qa9gpk7Jlf4iSV1T7MIS0-AiU1D5dgEwS_WDZV7fWgWHH5K96xDY31VN7BoCfPa40zNyQaUACx72DUrKDb3-yZCYEmTniYMFcmbo6GsIKUBSOcUePVGnvbU2Z_aUQTAoDxCA7ujoKuo3sRe-eUYILLoADvXDVXpJALQJnZrhv5WGWpP3HEkhxKu47CujjVRqhfnkE1SofLzyxM2GrphmVVfaJylSKYxsz3McFPLsmeeN3u3pX2BC5gZh3zWekaRMNVOGDTd3hoWpT1riA-w4iXFvzk97b5uA9QcqM7rzvSC2MDLrfQnyJjufJSkoo_ZNGY3EWqkIwfFoqTAIG-cLAf4NGr_tuoW_ZJexezdQ6Q9FO3H6r3XW5fm_GrzfFbyk=w640-h426-no" alt></p>
+<p>ひと通り、最新技術に触れた後、さらにシュン君の目が輝く時間が訪れた。開発技術の訴求に努めるデベロッパーエバンジェリストの高橋忍氏が、Visual StudioでWindows Phone向けアプリの作り方を紹介するデモを行ったからだ。</p>
+<p><img src="https://lh3.googleusercontent.com/tCEYqfnq4OJfUgT7E9pBaV2svMQmjr_l2Zdk5K90ITqGlYLehl18YHdXG0E8OsoBSsrYsi87Qoh-aQOyDoqIUozBXC1f6q9ZpeNCUe5qBmEOyACTZAsB8IMSVa8cFqbiGh4yFuZBkCt3HL4DYjqtrwyOc6GFcpqNeeYJYESpyJ7d8dIrIPVO1jwj-06I5UJhC6NiGTdgJPRPQc8eXFN86A5_qd5R9l2NYJ7GN6x4FYyN6_L6A-nOO2KueMxSB9nH2oXwTrQM5kn7gcuOqv8Lj8EBLPYfD7dIbNXbwgi3w993CViXEJ0tjVJk-EnMTA1aCjFKm8UqMWbm66x6nSzoLRLhJzsCRTS65h_X8OQRFl71qFZu-OHoyplOuXysfjNKRo3t2MJBsDQi2JU0kzLS17x-NE67H-kTsZ8fProiYncLItJWTL1g3drYB28mi4TlIg_YuDr1gkWJqn27Iv2VRIhAP1L96s-YIz-4K2GOuX8ZGVFPFxnQifs7z5ogSRhlO0_CB7Niu6p-lQosCFXr-eEvDdSUS0kyXDZeSI4b5uma9c632gIjKN2kQYOnMA01EK_Z54jdEudM6B1WnTI8ElWtAqgzpuDbcNX5RiY=w640-h426-no" alt></p>
+<p>Visual Studioのデモ画面が映し出されると、シュン君から「あっ、Ultimateだ！」という声が。実はシュン君が使っているVisual StudioはProfessional。「またマニアックなところに反応するね」とニコニコ顔の高橋氏の言葉に、「Professionalとどう違うのかなと思って」とシュン君。</p>
+<p>そんなシュン君の質問に高橋氏は「Ultimateは大人数で開発するために便利な機能が付いているんだよ。次期バージョンのVisual StudioもVisual Studioで開発しているというのは、豆知識（笑）。個人で開発するのであればほとんど違いはないから、大丈夫」。</p>
+<p>スマホを持っていないシュン君は、スマホ向けアプリはほとんど開発したことがないという。そこで高橋氏はVisual Studioに搭載されているデバイスエミュレータの機能を披露。</p>
+<p>「これを使えば実際にスマホがなくても、作ったアプリがちゃんと動作するか確かめられます。実はまだまだWindows Phone用のアプリ開発者は少ないので、今から勉強して優秀な開発者になってください」という言葉と共に、高橋氏はWindows Phone向けアプリの開発方法が記載された2冊の技術書をシュン君に進呈。</p>
+<p>また同時に模擬用のWindows Phoneも。ビックリしながらも大感激するシュン君とお母さんに、高橋氏は「見た目はスマホですが、電話がかかってくることはありません。電話としては機能していませんから」と笑いながら答えていた。</p>
+<p><img src="https://lh3.googleusercontent.com/V-hte4gUBggKjn0N3VCV64kx6_1_DgRQRoKEex_M-5bAmrZV8Npw_0lpi9QD0G9qvqKTB4p_W3onU0ct6P4zErZ7XlnQCw6OgXLpxRLqEr1R0UIXHLVYvIdNiQY4RLmV_IuGT8h2AbZoiPrWECHopM6fM_h5vfYZJrneVo2Z264ioEucDi_cFpGFMTpFOapcrC8FtjM2ml3UbKSJA_1N_WThPHi4dDS8poYdEAjsUHQnwAj6YFe8_1iTANVw-DZ-n6xrEUuBHBwqmVVuBZKx4myTDMdZ2agSjl6LunOkGtm-djvopKIh2nYN9Q4-755FL7eq9kaf5V0H3HsgbORi3kcyQHiXjUoWRQhpd9xFHnPKnQROMQarD5BxryW-hdBf7nWN-JacMorcQTcTCD6hMImkcx1yWZyoZRMGdttf6f9R8BctJJlzYA7Trhn_TjbCZUYTKiCXZQNH-qWqFGFHhkydA5yat3MOKqMaj_UlzSbre0ykePOmpKCKKC9_JddZnU5l1znH5EzzncMFATu5L4x6QgBk2b6Qexstq0-tH8Lbf5GDHzxrXQaaJM2K2vh95oqFtU2csZ1ISKlpVLz5feZm6yGKgMLJ6U85rcc=w640-h426-no" alt></p>
+<h2 id="「周りの人を幸せにするモノをつくるプログラマになって欲しい」"><a href="#「周りの人を幸せにするモノをつくるプログラマになって欲しい」" class="headerlink" title="「周りの人を幸せにするモノをつくるプログラマになって欲しい」"></a>「周りの人を幸せにするモノをつくるプログラマになって欲しい」</h2><p>憧れの日本マイクロソフトでひとときを過ごしたシュン君。最後に訪問の最大の目的だった「どうすれば、VisualStudioのような開発環境を作る仕事に就けるのですか」という質問を投げかけた。</p>
+<p>その問いに砂金氏は「さっきも言ったかもしれないけど、Visual Studioは数千人の人たちで作っているんだ。その開発者の多くはインドやアメリカの人たち。日本人のプログラマは少ないので、僕たちはもっと増やしていきたいと思っている。そして日本でも開発ができるようにしたい。だからシュン君もさらに勉強をして、世界トップクラスのプログラマを目指してくださいね」</p>
+<p><img src="https://lh3.googleusercontent.com/ZH11d0iR2-H4cGqipB9A9E-UjIpN5locRMnaJhI8dSvBIva4OhzfDzv1cZ--d15QNdJLWGsChWO7np1JBgIIhI91mTulsUnjHHHIo3zVxS98sLFmRoYKBclIocv9UQFA8d2rbTzEGev0eyYOQkttxgauwyJQcQA5U8TAAYut_fiEXLD0m3350gu0YF5x0CJXgQpSBib29uyKC2PrWg3AiSGcd7luyBRIlu6vM8xs8VW4-dhHLvaTorMdkdpmglUQLhsKMpqEM2Sthkn75nQgr9C38xaJ4oWod8AyqQpNtG9EUyfUn9TxM93hHZ14FwqE99AFa6B6FjYoCQdDl9J72sjrjqAR9WbwyEGOKl8L1VWJg2CMjeu7U02d-IzRIIgsleAUu3EA8XHLVOYAOhoXpeDk5u9g4co5UpH58EnJrdtL16-LXTkP0vV6c3pTIG-OzL_4mrMxJAPa7jsWQFzn_cYWuskp_6Er-2kU81FpOD49YU4GuGtQwM3GwNoL_xQ1ofiltCcQM3rWDxF2Ivvvm_l957-0xWRq-4pip7Hrm5uV5xSh2AJTDihhtwPeVcDsaeUjpA8gk_KfA-vUbzWoOkc26blnkGhFAv-Z4Gk=w640-h394-no" alt></p>
+<p>砂金氏の回答に、「そうなるためには、何を勉強して、何を身に付ければいいですか」と、シュン君はさらに突っ込んだ質問を繰り出した。それに対し高橋氏は「一つのソフトを作るのに数百人、場合によっては千人を超える人が携わっている。開発作業を効率的にし、良いアプリを作っていくためにはプログラミング能力だけでなく、コミュニケーション能力が求められるんだ」と答えた。</p>
+<p><img src="https://lh3.googleusercontent.com/qSk3CQ1ayuxfM97FtVNg_FxoxBF8v6vs141X3pZ2_eLK1w8OD0CUvJ5Flpw1icxJd7hYhTkZkSKrWwQg3zIT19GRyJw7fhH4DzBIxUvTBWPnN-eefsLWv5XQft7v0GBbrzYBIWpM1cgQWZ3HJNYTjIuugTOP3qpHEcp6mqg6qrP9L2KzJmUhsCGCRvyBPQLcz86X1MhR_Lt0iUUDkm2drlNrz05OQqhwaRbtGqUXwVxoZr3A4rV6uc8Evin0rHLLz0NQ_D6H3ydDnbWaQOVJ3Zq6T4ohh-oWsRG0byYzOChANzdgBhBWNvsClWdHJw0FxhEPMXWJ8VO5j0e9DA-A3U2JN8cCwXPLlRoBXRon58Q9TO3-cq0616FA7-6vwNSsuulcJnGwZBSXLHmTFcHkUJCnYuEXGQv6MkmUsJPhSdI7l8WpdpVDZzj7DFWbXLVO2lF_YoFp_hW3btVhrPFRSRJ9LR4t-Y94iOch7HkvTHFhKrYLpyY2LXnrdOAlee5E_Z3AUCM17n0P-_mH6Is1nkyBoNJY89yRNKffb0GplLD0MmUmlVwVwFJhPP_all0XqzASi5opC-KUrsnTysNhmrUY43DFAG547mhnhJU=w640-h426-no" alt></p>
+<p>「コミュニケーション能力？」と、ちょっと頭をひねるシュン君に、砂金氏は「例えば英語もその一つ。いいプログラムを書くと世界中から問い合わせやプログラミングの提案がくるんだ。そのときに英語ができないと、せっかくのチャンスを失うかもしれない。もったいでしょ」と話す。</p>
+<p>続けて砂金氏は「世界トップクラスのプログラマになるには、勉強よりも心構えが大事かもしれないね。例えばシュン君がどんなアプリを作っていいのか悩むことがあったとしよう。そのときは自分が困っていることから広げて、周りの人を幸せにするのはどんなモノかを考えて欲しい。例えばお母さんが買い物に困っているなら、それを便利にするアプリとか。常に人に喜ばれるモノを作ることを心がけることが大事だと思う」とアドバイス。</p>
+<p>そんな砂金氏、高橋氏の話に、シュン君は真剣な表情で聞き入っていた。最後にシュン君の感想を紹介したい。</p>
+<p>「未来のパソコンはマウスやキーボードがなく、人の動作を認識して動くものなのかなと思いました。動きを使ったアプリなどを作りたいです。頑張って勉強して、Kinectのアプリを作ってみます。プログラミングも大事だけれど、それをどう活かすかのアイデアも大事なのですね。そのために、学校の勉強、本を読むことも大切にしなければいけないと教えていただいたので、学校の勉強もしっかりします！」</p>
+<p>こうして日本マイクロソフト社での、非常に有意義な経験をし、視野がぐっと広がった様子のシュン君。数年後には次代を担うソフト開発者になっているのだろう。そのときはどんなソフトを作っているのだろうか。ぜひ、インタービューしたいものだ。</p>
+<p><img src="https://lh3.googleusercontent.com/YvAReGztD8g4GMHVgLXbRlk-F5UsiDC-FYO2HmJ11Uec6KmY74PWEPjfyH2mbMH1elU3RiITkyZYppwPyoHMJTp89ngtrli-NMUK-NItWb9p_0SAk97gybnR4Bg0LweK4IAUihTAYkm3_Ll7GYCudGG_2q324xSOpD7ryAevlbtp94clixIn0EBZZlwDRItf5JFozbnkICWPt4JLQcVRyfgRClzaYZ5f0EBJyA9Sa7LIJdXx5uIrFsgJtWzb3B252eXCd-vTql-BngJu0XA7gQ-o7ct-eK9CPTkP7CTwdlQu2gF1ssZ5CVliCEEjFgaPhZuw4xDMs8Gq3nwGNWPrfEi3GmUXZEg0Wj-rDbsaZ5VtTMnkm0imONsWHQRgG8X8cC9FPHL7k8e6g0fknWd3Z7NuklwIV9aTjgfbuQ_OsXBOECIai2ayLuAjLTTioepC3UDGpjS2I7klzDTmqFcmAmXSH3qURKvUnvDrTyD8iJW7-SBsndQMeECw5-z7sd4aM0_NybFkC4W6Kcx_EQQq58kkw55FCSox3tx6yqGhhzMxrZCrwVFQLgNYz1Pibq4ffy_Xfn_nFe50b9-7a9Cyi4uwQOFdtFY_Eitkw24=w640-h426-no" alt></p>
+<p>（執筆：中村仁美／撮影：平山諭）</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.j" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+    <a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-url="https://dev.twitter.com/web/tweet-button" data-via="twitterdev" data-related="twitterapi,twitter" data-hashtags="example,demo" data-text="custom share text" data-lang="ja" data-dnt="true">
+    Tweet
+    </a>
+    <div class="fb-share-button" data-href="http://asterisks.netlify.com/2014/01/22/ms-first-visit/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://asterisks.netlify.com/2014/01/22/ms-first-visit/">シェア</a>
+    </div>
+    <a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fasterisks.netlify.com%2Fatom.xml" target="blank"><img id="feedlyFollow" src="http://s3.feedly.com/img/follows/feedly-follow-rectangle-flat-medium_2x.png" alt="follow us in feedly" width="71" height="28"></a>
+  </footer>
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'asterisks'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2020 asterisks - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/PhotoSwipe/photoswipe.js"></script>
+  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+<script src="/scripts/main.js"></script>
+
+</body>
+</html>
